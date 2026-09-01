@@ -1,0 +1,472 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Las mejores hamburguesas y hot dogs artesanales. Carne de res seleccionada, queso fundido, papas fritas incluidas y pedidos directos por WhatsApp.">
+  <title>BURGER & HOT DOGS | Sabor Gourmet & Urbano</title>
+
+  <!-- Google Fonts: Bebas Neue, Outfit, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <!-- Brand Logo -->
+        <a href="#home" class="logo">
+          <div class="logo-icon"><i class="fa-solid fa-burger"></i></div>
+          <div>BURGER<span>&</span>HOTDOGS</div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link active">Inicio</a></li>
+          <li><a href="#menu" class="nav-link">Menú</a></li>
+          <li><a href="#promo" class="nav-link">Promociones</a></li>
+          <li><a href="#steps" class="nav-link">Cómo Pedir</a></li>
+          <li><a href="#contacto" class="nav-link">Contacto</a></li>
+        </ul>
+
+        <!-- Action Items -->
+        <div class="nav-actions">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Abierto Ahora</span>
+          </div>
+
+          <!-- Cart Button -->
+          <button class="cart-btn" id="cart-toggle-btn" aria-label="Abrir Carrito">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-badge" id="cart-badge-count">0</span>
+            <span class="cart-btn-total" id="cart-btn-total"></span>
+          </button>
+
+          <!-- Mobile Toggle Button -->
+          <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION
+       ========================================================================== -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Content -->
+        <div class="hero-content">
+          <div class="hero-tag">
+            <i class="fa-solid fa-fire"></i> Sabor Urbano & A la Plancha
+          </div>
+          <h1 class="hero-title">
+           <br><span class="highlight">DELICIOUS</span> BURGERS
+          </h1>
+          <p class="hero-desc">
+            Disfruta de nuestras hamburguesas con carne de res seleccionada y hot dogs cargados de sabor, con quesos fundidos y aderezos especiales de la casa.
+          </p>
+
+          <!-- Highlights Chips -->
+          <div class="hero-chips">
+            <div class="chip"><i class="fa-solid fa-check text-primary"></i> 🍟 Papas incluidas en cada Burger</div>
+            <div class="chip"><i class="fa-solid fa-check text-primary"></i> 🧀 Queso de hebra fundido</div>
+            <div class="chip"><i class="fa-solid fa-check text-primary"></i> 🛵 Entrega a domicilio rápida</div>
+          </div>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-cta">
+            <a href="#menu" class="btn btn-primary">
+              <i class="fa-solid fa-utensils"></i> Explorar Menú
+            </a>
+            <button class="btn btn-whatsapp" id="hero-whatsapp-btn">
+              <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Featured Media -->
+        <div class="hero-media">
+          <div class="hero-glow-bg"></div>
+          <div class="hero-card-featured">
+            <div class="hero-img-wrap">
+              <img src="assets/images/hero_burger.jpg" alt="Burguer Especial con Queso y Tocino" id="hero-img">
+              <span class="hero-badge-free">🍟 INCLUYE PAPAS</span>
+            </div>
+            <div class="hero-card-info">
+              <div>
+                <h3 class="hero-card-name">Burguer Especial</h3>
+                <p class="hero-card-meta">Carne de res, tocino, queso de hebra, piña & BBQ</p>
+              </div>
+              <div class="hero-card-price">$150</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURES STRIP
+       ========================================================================== -->
+  <section class="features-strip">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
+          <div class="feature-text">
+            <h4>100% Carne de Res</h4>
+            <p>Carne fresca y sazonada artesanalmente</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-cheese"></i></div>
+          <div class="feature-text">
+            <h4>Queso de Hebra Fundido</h4>
+            <p>El auténtico toque generoso y gratinado</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div>
+          <div class="feature-text">
+            <h4>Envíos a Domicilio</h4>
+            <p>Llega caliente y listo para disfrutar</p>
+          </div>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="feature-text">
+            <h4>Pedido por WhatsApp</h4>
+            <p>Fácil, directo y sin complicaciones</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROMOTION BANNER
+       ========================================================================== -->
+  <div class="container" id="promo">
+    <div class="promo-banner">
+      <div class="promo-content">
+        <h3>🍟 TODAS LAS BURGUER INCLUYEN PAPAS FRITAS</h3>
+        <p>Cada una de nuestras hamburguesas viene acompañada de su porción de papas doraditas para que tu experiencia sea completa.</p>
+      </div>
+      <a href="#menu" class="btn btn-outline" style="background: white; color: #111; font-weight: 800;">
+        ¡Quiero la Mía!
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MENU SECTION
+       ========================================================================== -->
+  <section class="menu-section" id="menu">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">NUESTRAS ESPECIALIDADES</span>
+        <h2 class="section-title">MENÚ PRINCIPAL</h2>
+        <p class="section-subtitle">Selecciona tus productos favoritos, personalízalos a tu gusto y envíalos en tu orden.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="menu-filters">
+        <button class="filter-btn active" data-category="all">
+          <i class="fa-solid fa-layer-group"></i> Todo el Menú
+        </button>
+        <button class="filter-btn" data-category="burgers">
+          <i class="fa-solid fa-burger"></i> Hamburguesas
+        </button>
+        <button class="filter-btn" data-category="hotdogs">
+          <i class="fa-solid fa-hotdog"></i> Hot Dogs
+        </button>
+        <button class="filter-btn" data-category="extras">
+          <i class="fa-solid fa-bowl-food"></i> Extras & Bebidas
+        </button>
+      </div>
+
+      <!-- Products Grid (Dynamically Populated by JavaScript) -->
+      <div class="products-grid" id="products-grid">
+        <!-- Dynamic content will be injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       HOW TO ORDER (STEPS)
+       ========================================================================== -->
+  <section class="steps-section" id="steps">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">FÁCIL Y RÁPIDO</span>
+        <h2 class="section-title">¿CÓMO HACER TU PEDIDO?</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-number">1</div>
+          <h3>Arma tu Pedido</h3>
+          <p>Explora el menú, elige tus hamburguesas o hot dogs y personalízalos (sin cebolla, sin picante, etc.).</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">2</div>
+          <h3>Revisa tu Carrito</h3>
+          <p>Verifica los productos agregados, ingresa tu dirección de entrega y elige tu método de pago.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-number">3</div>
+          <h3>Envía por WhatsApp</h3>
+          <p>Con un solo clic se abrirá WhatsApp con el mensaje estructurado listo para ser confirmado por nuestro equipo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CART SLIDE-OVER DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-backdrop" id="cart-backdrop">
+    <aside class="cart-drawer" id="cart-drawer">
+      
+      <!-- Cart Header -->
+      <div class="cart-header">
+        <h3>
+          <i class="fa-solid fa-bag-shopping text-primary"></i> Tu Pedido 
+          <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;" id="cart-item-count-label">(0 items)</span>
+        </h3>
+        <button class="cart-close-btn" id="cart-close-btn" aria-label="Cerrar Carrito">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Cart Items List -->
+      <div class="cart-body" id="cart-items-container">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- Cart Footer / Checkout Actions -->
+      <div class="cart-footer" id="cart-footer">
+        
+        <!-- Order Type Selection -->
+        <div class="order-type-selector">
+          <button class="type-btn active" id="type-delivery-btn" data-type="delivery">
+            <i class="fa-solid fa-motorcycle"></i> A Domicilio
+          </button>
+          <button class="type-btn" id="type-pickup-btn" data-type="pickup">
+            <i class="fa-solid fa-store"></i> Para Recoger
+          </button>
+        </div>
+
+        <!-- Cost Summary -->
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="summary-subtotal"></span>
+          </div>
+          <div class="summary-row" id="delivery-cost-row">
+            <span>Costo de Envío:</span>
+            <span style="color: var(--secondary); font-weight: 600;">Según tu zona 🛵</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total Estimado:</span>
+            <span id="summary-total"></span>
+          </div>
+        </div>
+
+        <!-- Checkout Action Button -->
+        <button class="btn btn-whatsapp" id="checkout-trigger-btn" style="width: 100%;">
+          <i class="fa-brands fa-whatsapp"></i> Completar Pedido
+        </button>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ==========================================================================
+       CHECKOUT MODAL (CUSTOMER INFO & ADDRESS)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="checkout-modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-clipboard-check text-primary"></i> Datos de Entrega</h3>
+        <button class="modal-close-btn" id="checkout-modal-close" aria-label="Cerrar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="checkout-form">
+        <div class="form-group">
+          <label class="form-label" for="customer-name">Nombre Completo *</label>
+          <input type="text" id="customer-name" class="form-input" placeholder="Ej. Gael Sánchez" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="customer-phone">Teléfono de Contacto *</label>
+          <input type="tel" id="customer-phone" class="form-input" placeholder="Ej. 55 1234 5678" required>
+        </div>
+
+        <div class="form-group" id="address-field-group">
+          <label class="form-label" for="customer-address">Dirección Completa de Entrega *</label>
+          <textarea id="customer-address" class="form-textarea" placeholder="Calle, Número exterior/interior, Colonia y Referencias (ej. frente al parque)" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="payment-method">Forma de Pago *</label>
+          <select id="payment-method" class="form-select">
+            <option value="Efectivo">Efectivo al recibir</option>
+            <option value="Efectivo (Cambio)">Efectivo (Requiero cambio)</option>
+            <option value="Transferencia">Transferencia bancaria</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="change-field-group" style="display: none;">
+          <label class="form-label" for="payment-change">¿Con cuánto billete pagarás?</label>
+          <input type="text" id="payment-change" class="form-input" placeholder="Ej. Pagaré con billete de ">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="order-notes">Notas / Instrucciones Adicionales</label>
+          <input type="text" id="order-notes" class="form-input" placeholder="Ej. Tocar el timbre, salsa extra, etc.">
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 10px;">
+          <i class="fa-brands fa-whatsapp"></i> Enviar Pedido a WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PRODUCT CUSTOMIZE MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="customize-modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-product-title">Personalizar Producto</h3>
+        <button class="modal-close-btn" id="customize-modal-close" aria-label="Cerrar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div id="customize-product-details" style="margin-bottom: 18px;">
+        <!-- Injected dynamically -->
+      </div>
+
+      <!-- Exclusions Section -->
+      <div class="options-group">
+        <div class="options-title">¿Deseas quitar algún ingrediente?</div>
+        <div id="exclusions-options-container">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Extras Section -->
+      <div class="options-group">
+        <div class="options-title">Ingredientes Extras (Opcional)</div>
+        <div id="extras-options-container">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Custom Notes Input -->
+      <div class="form-group">
+        <label class="form-label" for="custom-item-note">Instrucción Especial para este platillo</label>
+        <input type="text" id="custom-item-note" class="form-input" placeholder="Ej. Bien dorado, aderezo aparte...">
+      </div>
+
+      <!-- Modal Bottom Actions -->
+      <div style="display: flex; gap: 12px; align-items: center; margin-top: 20px;">
+        <button class="btn btn-primary" id="confirm-customize-add-btn" style="flex-grow: 1;">
+          <i class="fa-solid fa-cart-plus"></i> Añadir con Cambios (<span id="modal-calculated-price"></span>)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MOBILE FLOATING CART TRIGGER
+       ========================================================================== -->
+  <div class="mobile-cart-float" id="mobile-cart-float">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Ver Carrito (<span id="mobile-cart-count">0</span>)</span>
+    </div>
+    <span id="mobile-cart-total"></span>
+  </div>
+
+  <!-- ==========================================================================
+       TOAST FEEDBACK NOTIFICATION
+       ========================================================================== -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check text-primary"></i>
+    <span id="toast-message">Producto añadido al pedido</span>
+  </div>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer" id="contacto">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Col -->
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon"><i class="fa-solid fa-burger"></i></div>
+            <div>BURGER<span>&</span>HOTDOGS</div>
+          </div>
+          <p>El mejor sabor en hamburguesas gourmet y hot dogs cargados. Servicio a domicilio y pedidos directos.</p>
+        </div>
+
+        <!-- Hours & Service Col -->
+        <div class="footer-col">
+          <h4><i class="fa-regular fa-clock text-primary"></i> Horarios de Atención</h4>
+          <ul>
+            <li>Martes a Domingo: 6:00 PM - 12:00 AM</li>
+            <li>Lunes: Cerrado</li>
+            <li style="color: var(--secondary);">🛵 Servicio a Domicilio y Para Llevar</li>
+          </ul>
+        </div>
+
+        <!-- Contact Col -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-phone text-primary"></i> Contacto y Pedidos</h4>
+          <ul>
+            <li>WhatsApp: <a href="https://wa.me/529213033313" target="_blank" style="color: var(--whatsapp); font-weight: 700;">Hacer Pedido Ahora</a></li>
+            <li>Teléfono: +52 (921) 303 3313 </li>
+            <li>Zona de cobertura para envíos</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Burger & Hot Dogs. Todos los derechos reservados. Desarrollado para alta conversión y pedidos rápidos.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
