@@ -1,4 +1,4 @@
-﻿/**
+/**
  * BASE DE DATOS DE PRODUCTOS - BURGER & HOT DOGS
  * Datos basados fielmente en el menú del negocio
  */
@@ -50,26 +50,30 @@ const MENU_DATA = [
     popular: true
   },
 
-  // --- SECCIÓN HOT DOGS ---
+  // --- SECCIÓN HOT DOGS (JOCHOS JUMBOS) ---
   {
     id: "hotdog-sencillo",
     name: "Hot Dog Sencillo",
     category: "hotdogs",
-    price: 45,
+    price: 40,
+    priceWithoutFries: 40,
+    priceWithFries: 50,
     badge: "Clásico",
-    description: "Pan artesanal caliente, salchicha doradita, aderezos cremosos de la casa, mayonesa, ketchup y mostaza.",
-    includes: "Aderezos de la casa",
+    description: "Pan artesanal caliente, salchicha doradita, aderezos cremosos de la casa y salsas.",
+    includes: "Con papas: $50 / Sin papas: $40",
     image: "assets/images/hotdog_loaded.jpg",
     popular: false
   },
   {
     id: "hotdog-queso",
-    name: "Hot Dog con Queso",
+    name: "Hot Dog de Queso",
     category: "hotdogs",
-    price: 55,
-    badge: "Queso de Hebra",
-    description: "Salchicha dorada con generosa porción de queso de hebra fundido y gratinado, más aderezos especiales.",
-    includes: "Queso de hebra fundido",
+    price: 45,
+    priceWithoutFries: 45,
+    priceWithFries: 55,
+    badge: "Queso Fundido",
+    description: "Salchicha dorada con generosa porción de queso fundido, aderezos especiales y salsas.",
+    includes: "Con papas: $55 / Sin papas: $45",
     image: "assets/images/hotdog_loaded.jpg",
     popular: false
   },
@@ -77,10 +81,12 @@ const MENU_DATA = [
     id: "hotdog-tocino",
     name: "Hot Dog de Tocino",
     category: "hotdogs",
-    price: 75,
-    badge: "Crujiente",
-    description: "Salchicha envuelta en tocino crujiente, queso fundido, aderezos especiales y toque de chile.",
-    includes: "Tocino crujiente",
+    price: 65,
+    priceWithoutFries: 65,
+    priceWithFries: 75,
+    badge: "Tocino Crujiente",
+    description: "Salchicha envuelta en tocino crujiente, queso fundido, aderezos especiales y salsas.",
+    includes: "Con papas: $75 / Sin papas: $65",
     image: "assets/images/hotdog_special.jpg",
     popular: true
   },
@@ -88,10 +94,12 @@ const MENU_DATA = [
     id: "hotdog-hawaiano",
     name: "Hot Dog Hawaiano",
     category: "hotdogs",
-    price: 75,
-    badge: "Agridulce",
-    description: "Salchicha, piña caramelizada, abundante queso de hebra fundido, tocino y salsa BBQ.",
-    includes: "Piña asada & BBQ",
+    price: 70,
+    priceWithoutFries: 70,
+    priceWithFries: 75,
+    badge: "Piña Asada",
+    description: "Salchicha, queso derretido, tocino crujiente, piña asada caramelizada y salsas.",
+    includes: "Con papas: $75 / Sin papas: $70",
     image: "assets/images/hotdog_hawaiano.jpg",
     popular: false
   },
@@ -99,10 +107,12 @@ const MENU_DATA = [
     id: "hotdog-combinado",
     name: "Hot Dog Combinado",
     category: "hotdogs",
-    price: 90,
+    price: 80,
+    priceWithoutFries: 80,
+    priceWithFries: 90,
     badge: "⭐ Especial de la Casa",
-    description: "La joya de la casa: salchicha envuelta en tocino, queso de hebra deshebrado, piña, aderezos y salsas.",
-    includes: "Cargado con todo",
+    description: "Salchicha envuelta en tocino crujiente, queso de hebra deshebrado, piña dulce y salsas de la casa.",
+    includes: "Con papas: $90 / Sin papas: $80",
     image: "assets/images/hotdog_special.jpg",
     popular: true
   },
@@ -139,11 +149,18 @@ const CUSTOM_OPTIONS = {
 
 // Configuración general del negocio
 const STORE_CONFIG = {
-  name: "BURGER & HOT DOGS",
-  tagline: "El auténtico sabor urbano & a la plancha",
+  name: "ENTRE 3",
+  tagline: "Tres amigos, un mismo sabor",
+  specialties: "Hamburguesas • Hot Dogs • Papas",
   phone: "+52 921 303 3313", // Cambia esto por tu número de teléfono real con código de país
   whatsappNumber: "529213033313", // Cambia esto por tu número de WhatsApp real con código de país (ej. 521XXXXXXXXXX)
   currency: "$",
   deliveryNote: "🛵 Envíos a domicilio con costo adicional según zona",
-  promoHero: "🔥 ¡Todas las Burgers incluyen papas fritas gratis!"
+  promoHero: "🔥 ¡Todas las Burgers de ENTRE 3 incluyen papas fritas gratis!",
+  hours: {
+    openHour: 18, // 6:00 PM
+    closeHour: 24, // 12:00 AM
+    closedDays: [1], // Lunes = 1
+    scheduleText: "Mar a Dom: 6:00 PM - 12:00 AM • Lunes: Cerrado"
+  }
 };

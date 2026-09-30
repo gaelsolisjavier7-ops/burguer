@@ -1,10 +1,11 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Las mejores hamburguesas y hot dogs artesanales. Carne de res seleccionada, queso fundido, papas fritas incluidas y pedidos directos por WhatsApp.">
-  <title>BURGER & HOT DOGS | Sabor Gourmet & Urbano</title>
+  <meta name="description" content="ENTRE 3 - Tres amigos, un mismo sabor. Las mejores hamburguesas a la plancha, hot dogs con queso fundido y papas doraditas. Haz tu pedido directo por WhatsApp.">
+  <title>ENTRE 3 | Hamburguesas, Hot Dogs & Papas - Tres amigos, un mismo sabor</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/entre_3_logo.jpg">
 
   <!-- Google Fonts: Bebas Neue, Outfit, Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,6 +14,22 @@
 
   <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Pre-render Theme Initialization to prevent FOUC -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('bhd_theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
 
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
@@ -27,25 +44,41 @@
       <nav class="nav">
         <!-- Brand Logo -->
         <a href="#home" class="logo">
-          <div class="logo-icon"><i class="fa-solid fa-burger"></i></div>
-          <div>BURGER<span>&</span>HOTDOGS</div>
+          <img src="assets/images/entre_3_logo.jpg" alt="Logo ENTRE 3 - Hamburguesas, Hot Dogs y Papas" class="brand-logo-img">
+          <div class="logo-text-box">
+            <div class="logo-main-text">ENTRE<span class="logo-accent-num">3</span></div>
+            <div class="logo-slogan-text">Tres amigos, un mismo sabor</div>
+          </div>
         </a>
 
         <!-- Desktop Navigation -->
         <ul class="nav-links" id="nav-links">
           <li><a href="#home" class="nav-link active">Inicio</a></li>
           <li><a href="#menu" class="nav-link">Menú</a></li>
+          <li><a href="#galeria" class="nav-link">Galería</a></li>
           <li><a href="#promo" class="nav-link">Promociones</a></li>
           <li><a href="#steps" class="nav-link">Cómo Pedir</a></li>
           <li><a href="#contacto" class="nav-link">Contacto</a></li>
+          <li class="mobile-theme-item">
+            <button class="mobile-theme-btn" id="mobile-theme-toggle-btn" type="button" aria-label="Cambiar tema">
+              <i class="fa-solid fa-sun" id="mobile-theme-icon"></i>
+              <span id="mobile-theme-label">Cambiar a Modo Claro</span>
+            </button>
+          </li>
         </ul>
 
         <!-- Action Items -->
         <div class="nav-actions">
-          <div class="status-badge">
-            <span class="status-dot"></span>
-            <span>Abierto Ahora</span>
+          <div class="status-badge" id="nav-store-status" title="Clic para ver horario">
+            <span class="status-dot" id="nav-status-dot"></span>
+            <span id="nav-status-text">Abierto Ahora</span>
           </div>
+
+          <!-- Theme Switcher Button -->
+          <button class="theme-toggle-btn" id="theme-toggle-btn" type="button" aria-label="Cambiar a tema claro" title="Cambiar tema (Día / Noche)">
+            <i class="fa-solid fa-sun" id="theme-toggle-icon"></i>
+            <span class="theme-tooltip" id="theme-tooltip">Modo Claro</span>
+          </button>
 
           <!-- Cart Button -->
           <button class="cart-btn" id="cart-toggle-btn" aria-label="Abrir Carrito">
@@ -75,13 +108,13 @@
         <!-- Left Content -->
         <div class="hero-content">
           <div class="hero-tag">
-            <i class="fa-solid fa-fire"></i> Sabor Urbano & A la Plancha
+            <i class="fa-solid fa-fire text-primary"></i> Tres amigos, un mismo sabor
           </div>
           <h1 class="hero-title">
-           <br><span class="highlight">DELICIOUS</span> BURGERS
+            HAMBURGUESAS, HOT DOGS & PAPAS <br><span class="highlight">ENTRE 3</span>
           </h1>
           <p class="hero-desc">
-            Disfruta de nuestras hamburguesas con carne de res seleccionada y hot dogs cargados de sabor, con quesos fundidos y aderezos especiales de la casa.
+            El auténtico sabor a la plancha preparado con pasión. Carne 100% de res, queso fundido, tocino crujiente, hot dogs especiales y papas doraditas para compartir con los que más quieres.
           </p>
 
           <!-- Highlights Chips -->
@@ -106,13 +139,16 @@
         <div class="hero-media">
           <div class="hero-glow-bg"></div>
           <div class="hero-card-featured">
+            <div class="hero-brand-floating-badge" title="ENTRE 3 - Tres amigos, un mismo sabor">
+              <img src="assets/images/entre_3_logo.jpg" alt="Logo Oficial ENTRE 3" class="hero-brand-badge-img">
+            </div>
             <div class="hero-img-wrap">
               <img src="assets/images/hero_burger.jpg" alt="Burguer Especial con Queso y Tocino" id="hero-img">
               <span class="hero-badge-free">🍟 INCLUYE PAPAS</span>
             </div>
             <div class="hero-card-info">
               <div>
-                <h3 class="hero-card-name">Burguer Especial</h3>
+                <h3 class="hero-card-name">Burguer Especial ENTRE 3</h3>
                 <p class="hero-card-meta">Carne de res, tocino, queso de hebra, piña & BBQ</p>
               </div>
               <div class="hero-card-price">$150</div>
@@ -168,8 +204,8 @@
   <div class="container" id="promo">
     <div class="promo-banner">
       <div class="promo-content">
-        <h3>🍟 TODAS LAS BURGUER INCLUYEN PAPAS FRITAS</h3>
-        <p>Cada una de nuestras hamburguesas viene acompañada de su porción de papas doraditas para que tu experiencia sea completa.</p>
+        <h3>🍟 TODAS LAS BURGERS INCLUYEN PAPAS • ¡Y AHORA TUS HOT DOGS TAMBIÉN!</h3>
+        <p>Disfruta tus hamburguesas con papas fritas incluidas o elige tus Jochos Jumbos en combo con papas crujientes.</p>
       </div>
       <a href="#menu" class="btn btn-outline" style="background: white; color: #111; font-weight: 800;">
         ¡Quiero la Mía!
@@ -188,19 +224,71 @@
         <p class="section-subtitle">Selecciona tus productos favoritos, personalízalos a tu gusto y envíalos en tu orden.</p>
       </div>
 
+      <!-- Menu Toolbar: Search Bar + Quick Suggestion Tags -->
+      <div class="menu-search-wrapper">
+        <div class="menu-search-bar" role="search">
+          <span class="search-icon-box" aria-hidden="true">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input 
+            type="search" 
+            id="menu-search-input" 
+            class="menu-search-input" 
+            placeholder="Buscar hamburguesas, hot dogs, ingredientes (tocino, piña, queso)..." 
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Buscar hamburguesas o hot dogs"
+          >
+          <button 
+            type="button" 
+            id="menu-search-clear-btn" 
+            class="menu-search-clear-btn" 
+            aria-label="Limpiar búsqueda" 
+            title="Limpiar búsqueda"
+            style="display: none;"
+          >
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+          <div class="search-keyboard-hint" id="search-keyboard-hint">
+            <kbd>ESC</kbd>
+          </div>
+        </div>
+
+        <!-- Quick Search Suggestion Pills -->
+        <div class="search-quick-tags" id="search-quick-tags" aria-label="Sugerencias de búsqueda rápida">
+          <span class="quick-tags-title"><i class="fa-solid fa-fire"></i> Populares:</span>
+          <button type="button" class="quick-tag-chip" data-search="Tocino">🥓 Con Tocino</button>
+          <button type="button" class="quick-tag-chip" data-search="Queso de hebra">🧀 Queso de Hebra</button>
+          <button type="button" class="quick-tag-chip" data-search="Hawaiana">🍍 Hawaiana</button>
+          <button type="button" class="quick-tag-chip" data-search="Especial">⭐ Especiales</button>
+          <button type="button" class="quick-tag-chip" data-search="Papas">🍟 Papas</button>
+        </div>
+      </div>
+
       <!-- Filter Buttons -->
-      <div class="menu-filters">
-        <button class="filter-btn active" data-category="all">
+      <div class="menu-filters" role="tablist" aria-label="Filtro de categorías de menú">
+        <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">
           <i class="fa-solid fa-layer-group"></i> Todo el Menú
         </button>
-        <button class="filter-btn" data-category="burgers">
+        <button class="filter-btn" data-category="burgers" role="tab" aria-selected="false">
           <i class="fa-solid fa-burger"></i> Hamburguesas
         </button>
-        <button class="filter-btn" data-category="hotdogs">
+        <button class="filter-btn" data-category="hotdogs" role="tab" aria-selected="false">
           <i class="fa-solid fa-hotdog"></i> Hot Dogs
         </button>
-        <button class="filter-btn" data-category="extras">
+        <button class="filter-btn" data-category="extras" role="tab" aria-selected="false">
           <i class="fa-solid fa-bowl-food"></i> Extras & Bebidas
+        </button>
+      </div>
+
+      <!-- Search & Filter Live Summary Bar -->
+      <div class="menu-search-status" id="menu-search-status" style="display: none;">
+        <div class="search-status-info">
+          <span class="search-status-pill" id="search-status-count">0 encontrados</span>
+          <span class="search-status-text" id="search-status-desc">para búsqueda</span>
+        </div>
+        <button type="button" class="search-status-clear" id="search-status-clear-btn">
+          <i class="fa-solid fa-xmark"></i> Quitar búsqueda
         </button>
       </div>
 
@@ -210,6 +298,257 @@
       </div>
     </div>
   </section>
+
+  <!-- ==========================================================================
+       PHOTO GALLERY SECTION (CUADRÍCULA DE FOTOS DE ALTA CALIDAD)
+       ========================================================================== -->
+  <section class="gallery-section" id="galeria">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-camera-retro"></i> EXPERIENCIA ENTRE 3</span>
+        <h2 class="section-title">NUESTROS ANTOJOS A LA PLANCHA</h2>
+        <p class="section-subtitle">Preparados al momento con ingredientes frescos, queso de hebra fundido y el toque único de tres amigos apasionados por el sabor.</p>
+      </div>
+
+      <!-- Gallery Filter Chips -->
+      <div class="gallery-filters" role="tablist" aria-label="Filtro de fotos">
+        <button type="button" class="gallery-filter-btn active" data-filter="all">
+          <i class="fa-solid fa-fire"></i> Todos los Antojos
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="burgers">
+          <i class="fa-solid fa-burger"></i> Burgers
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="hotdogs">
+          <i class="fa-solid fa-hotdog"></i> Hot Dogs
+        </button>
+        <button type="button" class="gallery-filter-btn" data-filter="extras">
+          <i class="fa-solid fa-bowl-food"></i> Papas & Extras
+        </button>
+      </div>
+
+      <!-- High-Quality Photo Grid -->
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Item 1: Burger Especial Queso & Tocino -->
+        <article class="gallery-item featured" data-category="burgers" data-product-id="burger-especial" style="--fade-idx: 0;">
+          <div class="gallery-img-container">
+            <img 
+              src="assets/images/burger_cheese_pull_1790710190015.jpg" 
+              alt="Burguer Especial con Queso de Hebra y Tocino a la Plancha" 
+              class="gallery-img" 
+              loading="lazy" 
+              referrerpolicy="no-referrer"
+            >
+            <div class="gallery-badge"><i class="fa-solid fa-fire"></i> Especialidad de la Casa</div>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="gallery-category-pill">Hamburguesas</span>
+                <h3 class="gallery-item-title">Burguer Especial con Queso Fundido</h3>
+                <p class="gallery-item-desc">Carne sellada a la plancha, doble queso de hebra derretido, tocino crujiente y piña asada.</p>
+                <div class="gallery-overlay-footer">
+                  <span class="gallery-price">$150 · Incluye Papas 🍟</span>
+                  <button type="button" class="gallery-zoom-btn" aria-label="Ver foto en alta resolución">
+                    <i class="fa-solid fa-expand"></i> Ver Detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 2: Hot Dogs a la Plancha -->
+        <article class="gallery-item" data-category="hotdogs" data-product-id="hotdog-tocino" style="--fade-idx: 1;">
+          <div class="gallery-img-container">
+            <img 
+              src="assets/images/hotdogs_plancha_1790710200592.jpg" 
+              alt="Hot Dogs a la Plancha con Tocino y Queso Gratinado" 
+              class="gallery-img" 
+              loading="lazy" 
+              referrerpolicy="no-referrer"
+            >
+            <div class="gallery-badge"><i class="fa-solid fa-bacon"></i> Envuelto en Tocino</div>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="gallery-category-pill">Hot Dogs</span>
+                <h3 class="gallery-item-title">Hot Dog de Tocino con Queso</h3>
+                <p class="gallery-item-desc">Salchicha dorada envuelta en tocino crujiente con generosa porción de queso fundido.</p>
+                <div class="gallery-overlay-footer">
+                  <span class="gallery-price">Sin papas $65 / Con papas $75 🍟</span>
+                  <button type="button" class="gallery-zoom-btn" aria-label="Ver foto en alta resolución">
+                    <i class="fa-solid fa-expand"></i> Ver Detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 3: Papas Francesas Doraditas -->
+        <article class="gallery-item" data-category="extras" data-product-id="extra-papas" style="--fade-idx: 2;">
+          <div class="gallery-img-container">
+            <img 
+              src="assets/images/fries_golden_crisp_1790710209462.jpg" 
+              alt="Papas Francesas Doradas y Crujientes" 
+              class="gallery-img" 
+              loading="lazy" 
+              referrerpolicy="no-referrer"
+            >
+            <div class="gallery-badge"><i class="fa-solid fa-sparkles"></i> Gratis en tu Burger</div>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="gallery-category-pill">Complementos</span>
+                <h3 class="gallery-item-title">Papas Fritas Crujientes</h3>
+                <p class="gallery-item-desc">Papas a la francesa sazonadas al momento, doraditas y servidas con aderezos de la casa.</p>
+                <div class="gallery-overlay-footer">
+                  <span class="gallery-price">$40 · Orden Extra</span>
+                  <button type="button" class="gallery-zoom-btn" aria-label="Ver foto en alta resolución">
+                    <i class="fa-solid fa-expand"></i> Ver Detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 4: Hot Dog Combinado -->
+        <article class="gallery-item" data-category="hotdogs" data-product-id="hotdog-combinado" style="--fade-idx: 3;">
+          <div class="gallery-img-container">
+            <img 
+              src="assets/images/hotdog_special.jpg" 
+              alt="Hot Dog Combinado Especial de la Casa" 
+              class="gallery-img" 
+              loading="lazy" 
+              referrerpolicy="no-referrer"
+            >
+            <div class="gallery-badge">⭐ Especial ENTRE 3</div>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="gallery-category-pill">Hot Dogs</span>
+                <h3 class="gallery-item-title">Hot Dog Combinado</h3>
+                <p class="gallery-item-desc">Salchicha envuelta en tocino, queso de hebra deshebrado, piña y aderezos especiales.</p>
+                <div class="gallery-overlay-footer">
+                  <span class="gallery-price">Sin papas $80 / Con papas $90 🍟</span>
+                  <button type="button" class="gallery-zoom-btn" aria-label="Ver foto en alta resolución">
+                    <i class="fa-solid fa-expand"></i> Ver Detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 5: Burguer de Tocino Clásica -->
+        <article class="gallery-item" data-category="burgers" data-product-id="burger-tocino" style="--fade-idx: 4;">
+          <div class="gallery-img-container">
+            <img 
+              src="assets/images/burger_bacon.jpg" 
+              alt="Burguer de Tocino Clásica" 
+              class="gallery-img" 
+              loading="lazy" 
+              referrerpolicy="no-referrer"
+            >
+            <div class="gallery-badge"><i class="fa-solid fa-heart"></i> La Favorita</div>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="gallery-category-pill">Hamburguesas</span>
+                <h3 class="gallery-item-title">Burguer de Tocino</h3>
+                <p class="gallery-item-desc">Carne de res seleccionada, queso amarillo, queso de hebra, tocino crujiente y BBQ.</p>
+                <div class="gallery-overlay-footer">
+                  <span class="gallery-price">$110 · Incluye Papas 🍟</span>
+                  <button type="button" class="gallery-zoom-btn" aria-label="Ver foto en alta resolución">
+                    <i class="fa-solid fa-expand"></i> Ver Detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <!-- Item 6: Burguer Hawaiana con Piña Asada -->
+        <article class="gallery-item" data-category="burgers" data-product-id="burger-hawaiana" style="--fade-idx: 5;">
+          <div class="gallery-img-container">
+            <img 
+              src="assets/images/burger_combo.jpg" 
+              alt="Burguer Hawaiana con Piña Asada y Papas" 
+              class="gallery-img" 
+              loading="lazy" 
+              referrerpolicy="no-referrer"
+            >
+            <div class="gallery-badge"><i class="fa-solid fa-sun"></i> Sabor Tropical</div>
+            <div class="gallery-overlay">
+              <div class="gallery-overlay-content">
+                <span class="gallery-category-pill">Hamburguesas</span>
+                <h3 class="gallery-item-title">Burguer Hawaiana</h3>
+                <p class="gallery-item-desc">Piña dulce asada a la plancha, cebolla caramelizada, queso de hebra y salsa BBQ.</p>
+                <div class="gallery-overlay-footer">
+                  <span class="gallery-price">$125 · Incluye Papas 🍟</span>
+                  <button type="button" class="gallery-zoom-btn" aria-label="Ver foto en alta resolución">
+                    <i class="fa-solid fa-expand"></i> Ver Detalles
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Gallery CTA Banner -->
+      <div class="gallery-cta-bar">
+        <div class="gallery-cta-left">
+          <div class="gallery-cta-badge">
+            <i class="fa-solid fa-fire text-primary"></i>
+            <span>Hecho con Pasión</span>
+          </div>
+          <h3>¿Se te antojó alguno de nuestros platillos?</h3>
+          <p>Todos se preparan al momento en la plancha caliente. Haz tu pedido y recíbelo calientito en tu domicilio.</p>
+        </div>
+        <div class="gallery-cta-actions">
+          <a href="#menu" class="btn btn-primary">
+            <i class="fa-solid fa-utensils"></i> Explorar Menú y Ordenar
+          </a>
+          <a href="https://wa.me/529213033313?text=%C2%A1Hola!%20Vi%20las%20fotos%20de%20ENTRE%203%20y%20se%20me%20antoj%C3%B3%20hacer%20un%20pedido%20%F0%9F%8D%94" target="_blank" class="btn btn-whatsapp">
+            <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Lightbox Modal -->
+  <div class="gallery-lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-dialog">
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Cerrar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="lightbox-body">
+        <div class="lightbox-image-wrap">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img">
+          <div class="lightbox-nav-buttons">
+            <button type="button" class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Foto anterior">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" class="lightbox-nav-btn next" id="lightbox-next" aria-label="Foto siguiente">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="lightbox-details">
+          <span class="lightbox-category" id="lightbox-category">Hamburguesas</span>
+          <h3 class="lightbox-title" id="lightbox-title">Título del Platillo</h3>
+          <p class="lightbox-desc" id="lightbox-desc">Descripción del platillo</p>
+          <div class="lightbox-price-tag" id="lightbox-price">$150 MXN</div>
+          <div class="lightbox-actions">
+            <button type="button" class="btn btn-primary" id="lightbox-order-btn">
+              <i class="fa-solid fa-cart-plus"></i> Ordenar Este Platillo
+            </button>
+            <button type="button" class="btn btn-outline" id="lightbox-view-menu-btn">
+              <i class="fa-solid fa-list"></i> Ver en Menú
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- ==========================================================================
        HOW TO ORDER (STEPS)
@@ -258,6 +597,44 @@
         </button>
       </div>
 
+      <!-- Dynamic Estimated Wait Time Indicator -->
+      <div class="cart-wait-widget" id="cart-wait-widget">
+        <div class="wait-widget-top">
+          <div class="wait-badge-group">
+            <span class="wait-live-indicator"><span class="wait-pulse-dot" id="wait-pulse-dot"></span> EN VIVO</span>
+            <span class="wait-status-pill" id="wait-status-pill">Demanda Normal</span>
+          </div>
+          <button class="wait-mode-toggle-btn" id="wait-mode-toggle-btn" title="Clic para simular carga en cocina">
+            <i class="fa-solid fa-fire-burner text-secondary"></i>
+            <span id="wait-queue-counter">4 órdenes en cocina</span>
+          </button>
+        </div>
+
+        <div class="wait-main-card">
+          <div class="wait-icon-box" id="wait-icon-box">
+            <i class="fa-solid fa-stopwatch" id="wait-main-icon"></i>
+          </div>
+          <div class="wait-time-data">
+            <div class="wait-time-caption">Tiempo estimado de espera</div>
+            <div class="wait-time-value" id="wait-time-value">25 - 35 min</div>
+          </div>
+          <div class="wait-type-tag" id="wait-type-tag">
+            <i class="fa-solid fa-motorcycle" id="wait-type-icon"></i>
+            <span id="wait-type-text">A Domicilio</span>
+          </div>
+        </div>
+
+        <div class="wait-progress-wrapper">
+          <div class="wait-progress-track">
+            <div class="wait-progress-fill" id="wait-progress-fill" style="width: 45%;"></div>
+          </div>
+          <div class="wait-progress-labels">
+            <span id="wait-time-context"><i class="fa-regular fa-clock"></i> Calculado según la hora y pedidos activos</span>
+            <span id="wait-item-impact" class="wait-item-impact">+0 min por platillos</span>
+          </div>
+        </div>
+      </div>
+
       <!-- Cart Items List -->
       <div class="cart-body" id="cart-items-container">
         <!-- Rendered by JavaScript -->
@@ -285,6 +662,10 @@
           <div class="summary-row" id="delivery-cost-row">
             <span>Costo de Envío:</span>
             <span style="color: var(--secondary); font-weight: 600;">Según tu zona 🛵</span>
+          </div>
+          <div class="summary-row" id="wait-time-summary-row">
+            <span><i class="fa-solid fa-stopwatch text-secondary"></i> Espera Estimada:</span>
+            <span id="summary-wait-time" style="color: var(--secondary); font-weight: 700;">25 - 35 min</span>
           </div>
           <div class="summary-row total">
             <span>Total Estimado:</span>
@@ -348,6 +729,11 @@
           <input type="text" id="order-notes" class="form-input" placeholder="Ej. Tocar el timbre, salsa extra, etc.">
         </div>
 
+        <div class="checkout-wait-notice" id="checkout-wait-notice">
+          <i class="fa-solid fa-stopwatch text-secondary"></i>
+          <span>Tiempo estimado de preparación/entrega: <strong id="checkout-wait-time">25 - 35 min</strong></span>
+        </div>
+
         <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 10px;">
           <i class="fa-brands fa-whatsapp"></i> Enviar Pedido a WhatsApp
         </button>
@@ -369,6 +755,14 @@
 
       <div id="customize-product-details" style="margin-bottom: 18px;">
         <!-- Injected dynamically -->
+      </div>
+
+      <!-- Hot Dog Fries Presentation Choice (Only for Hot Dogs) -->
+      <div class="options-group" id="hotdog-fries-selection-group" style="display: none;">
+        <div class="options-title"><i class="fa-solid fa-french-fries text-secondary"></i> ¿Cómo quieres tu Jocho?</div>
+        <div class="fries-options-grid" id="hotdog-fries-options-container">
+          <!-- Injected dynamically -->
+        </div>
       </div>
 
       <!-- Exclusions Section -->
@@ -431,10 +825,13 @@
         <!-- Brand Col -->
         <div class="footer-brand">
           <div class="logo">
-            <div class="logo-icon"><i class="fa-solid fa-burger"></i></div>
-            <div>BURGER<span>&</span>HOTDOGS</div>
+            <img src="assets/images/entre_3_logo.jpg" alt="Logo ENTRE 3" class="brand-logo-img">
+            <div class="logo-text-box">
+              <div class="logo-main-text">ENTRE<span class="logo-accent-num">3</span></div>
+              <div class="logo-slogan-text">Tres amigos, un mismo sabor</div>
+            </div>
           </div>
-          <p>El mejor sabor en hamburguesas gourmet y hot dogs cargados. Servicio a domicilio y pedidos directos.</p>
+          <p>El auténtico sabor a la plancha. Hamburguesas 100% de res con papas incluidas, hot dogs especiales cargados y los mejores ingredientes. Envíos directos y pedidos por WhatsApp.</p>
         </div>
 
         <!-- Hours & Service Col -->
@@ -443,7 +840,7 @@
           <ul>
             <li>Martes a Domingo: 6:00 PM - 12:00 AM</li>
             <li>Lunes: Cerrado</li>
-            <li style="color: var(--secondary);">🛵 Servicio a Domicilio y Para Llevar</li>
+            <li style="color: var(--secondary); font-weight: 700;">🛵 Servicio a Domicilio y Para Llevar</li>
           </ul>
         </div>
 
@@ -451,16 +848,16 @@
         <div class="footer-col">
           <h4><i class="fa-solid fa-phone text-primary"></i> Contacto y Pedidos</h4>
           <ul>
-            <li>WhatsApp: <a href="https://wa.me/529213033313" target="_blank" style="color: var(--whatsapp); font-weight: 700;">Hacer Pedido Ahora</a></li>
-            <li>Teléfono: +52 (921) 303 3313 </li>
-            <li>Zona de cobertura para envíos</li>
+            <li>WhatsApp: <a href="https://wa.me/529213033313" target="_blank" style="color: var(--whatsapp); font-weight: 700;">Hacer Pedido en WhatsApp</a></li>
+            <li>Teléfono: +52 (921) 303 3313</li>
+            <li>Zona de entrega a domicilio</li>
           </ul>
         </div>
 
       </div>
 
       <div class="footer-bottom">
-        <p>&copy; 2026 Burger & Hot Dogs. Todos los derechos reservados. Desarrollado para alta conversión y pedidos rápidos.</p>
+        <p>&copy; 2026 ENTRE 3. Todos los derechos reservados. Hamburguesas • Hot Dogs • Papas. Tres amigos, un mismo sabor.</p>
       </div>
     </div>
   </footer>

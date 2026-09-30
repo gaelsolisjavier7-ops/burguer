@@ -1,0 +1,15 @@
+{
+  "name": "burguer",
+  "version": "1.0.0",
+  "description": "Sitio web para negocio de hamburguesas y hot dogs gourmet con pedidos por WhatsApp",
+  "main": "server.js",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "lint": "node --check js/app.js js/products.js server.js",
+    "build": "echo 'Static site ready'"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
