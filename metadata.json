@@ -1,0 +1,6 @@
+{
+  "name": "BURGER & HOT DOGS",
+  "description": "Sitio web para negocio de hamburguesas y hot dogs artesanales con carrito dinámico, cálculo de tiempo de espera y rastreador visual de pedidos en tiempo real",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

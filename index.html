@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ENTRE 3 - Tres amigos, un mismo sabor. Las mejores hamburguesas a la plancha, hot dogs con queso fundido y papas doraditas en Nanchital de Lázaro Cárdenas del Río, Veracruz. Haz tu pedido directo por WhatsApp.">
+  <meta property="og:title" content="ENTRE 3 | Hamburguesas, Hot Dogs & Papas - Nanchital de Lázaro Cárdenas del Río, Ver.">
+  <meta property="og:description" content="Tablero gastronómico estilo Pinterest de hamburguesas a la plancha, hot dogs jumbos y papas doraditas en Nanchital de Lázaro Cárdenas del Río, Veracruz.">
+  <meta property="og:image" content="assets/images/entre_3_logo.jpg">
+  <title>ENTRE 3 | Hamburguesas, Hot Dogs & Papas - Nanchital de Lázaro Cárdenas del Río, Ver.</title>
+  <link rel="icon" type="image/jpeg" href="assets/images/entre_3_logo.jpg">
+
+  <!-- Google Fonts: Bebas Neue, Outfit, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Pre-render Theme Initialization to prevent FOUC -->
+  <script>
+    (function() {
+      try {
+        const savedTheme = localStorage.getItem('bhd_theme');
+        if (savedTheme === 'light' || savedTheme === 'dark') {
+          document.documentElement.setAttribute('data-theme', savedTheme);
+        } else {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      } catch (e) {
+        document.documentElement.setAttribute('data-theme', 'dark');
+      }
+    })();
+  </script>
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="header">
+    <div class="container">
+      <nav class="nav">
+        <!-- Brand Logo -->
+        <a href="#home" class="logo">
+          <img src="assets/images/entre_3_logo.jpg" alt="Logo ENTRE 3 - Hamburguesas, Hot Dogs y Papas" class="brand-logo-img">
+          <div class="logo-text-box">
+            <div class="logo-main-text">ENTRE<span class="logo-accent-num">3</span></div>
+            <div class="logo-slogan-text">Tres amigos, un mismo sabor</div>
+          </div>
+        </a>
+
+        <!-- Desktop Navigation -->
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#home" class="nav-link active">Inicio</a></li>
+          <li><a href="#menu" class="nav-link">Tablero</a></li>
+          <li><a href="#promo" class="nav-link">Promociones</a></li>
+          <li><a href="#steps" class="nav-link">Cómo Pedir</a></li>
+          <li><a href="#contacto" class="nav-link">Zona de Reparto</a></li>
+          <li class="mobile-theme-item">
+            <button class="mobile-theme-btn" id="mobile-theme-toggle-btn" type="button" aria-label="Cambiar tema">
+              <i class="fa-solid fa-sun" id="mobile-theme-icon"></i>
+              <span id="mobile-theme-label">Cambiar a Modo Claro</span>
+            </button>
+          </li>
+        </ul>
+
+        <!-- Action Items -->
+        <div class="nav-actions">
+          <div class="status-badge" id="nav-store-status" title="Clic para ver horario">
+            <span class="status-dot" id="nav-status-dot"></span>
+            <span id="nav-status-text">Abierto Ahora</span>
+          </div>
+
+          <!-- Theme Switcher Button -->
+          <button class="theme-toggle-btn" id="theme-toggle-btn" type="button" aria-label="Cambiar a tema claro" title="Cambiar tema (Día / Noche)">
+            <i class="fa-solid fa-sun" id="theme-toggle-icon"></i>
+            <span class="theme-tooltip" id="theme-tooltip">Modo Claro</span>
+          </button>
+
+          <!-- Cart Button -->
+          <button class="cart-btn" id="cart-toggle-btn" aria-label="Abrir Carrito">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <span class="cart-badge" id="cart-badge-count">0</span>
+            <span class="cart-btn-total" id="cart-btn-total"></span>
+          </button>
+
+          <!-- Mobile Toggle Button -->
+          <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       HERO SECTION (PINTEREST BOARD & CREATOR SHOWCASE)
+       ========================================================================== -->
+  <section class="hero pinterest-hero" id="home">
+    <div class="container">
+      <div class="hero-grid">
+        
+        <!-- Left Content -->
+        <div class="hero-content scroll-reveal">
+          <div class="pinterest-board-badge">
+            <span class="board-badge-icon"><i class="fa-solid fa-thumbtack"></i></span>
+            <span>Tablero Oficial de ENTRE 3 • Nanchital de Lázaro Cárdenas del Río, Ver.</span>
+          </div>
+          <h1 class="hero-title">
+            ANTOJOS A LA PLANCHA, <br><span class="highlight">HAMBURGUESAS & JOCHOS</span>
+          </h1>
+          <p class="hero-desc">
+            Explora nuestros pines gastronómicos preparados al momento en Nanchital. Carne 100% de res sellada a la plancha, queso de hebra fundido generosamente, hot dogs especiales envueltos en tocino y papas doraditas para disfrutar.
+          </p>
+
+          <!-- Pinterest Board Stats / Tags -->
+          <div class="pinterest-board-stats">
+            <div class="board-stat-item">
+              <span class="stat-number">10</span>
+              <span class="stat-label">Pines de Menú</span>
+            </div>
+            <div class="board-stat-divider">·</div>
+            <div class="board-stat-item">
+              <span class="stat-number">🍟</span>
+              <span class="stat-label">Papas Incluidas</span>
+            </div>
+            <div class="board-stat-divider">·</div>
+            <div class="board-stat-item">
+              <span class="stat-number">🛵</span>
+              <span class="stat-label">Reparto en Nanchital</span>
+            </div>
+          </div>
+
+          <!-- Call to Action Buttons -->
+          <div class="hero-cta">
+            <a href="#menu" class="btn btn-pinterest">
+              <i class="fa-solid fa-thumbtack"></i> Explorar Tablero
+            </a>
+            <button class="btn btn-whatsapp" id="hero-whatsapp-btn">
+              <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Featured Media (Pinterest Pin Card) -->
+        <div class="hero-media scroll-reveal" style="--fade-idx: 1;">
+          <div class="hero-glow-bg"></div>
+          <div class="hero-card-featured pin-card is-visible" style="margin-bottom: 0;">
+            <div class="hero-brand-floating-badge" title="ENTRE 3 - Tres amigos, un mismo sabor">
+              <img src="assets/images/entre_3_logo.jpg" alt="Logo Oficial ENTRE 3" class="hero-brand-badge-img">
+            </div>
+            <div class="hero-img-wrap pin-media-wrap">
+              <img src="assets/images/burger_cheese_pull_1790710190015.jpg" alt="Burguer Especial con Queso y Tocino" id="hero-img" class="pin-img">
+              <span class="pin-badge">⭐ Pin Destacado</span>
+              <div class="pin-hover-overlay">
+                <div class="pin-top-actions">
+                  <button type="button" class="pin-save-btn" onclick="openProductInLightbox('burger-especial')">
+                    <i class="fa-solid fa-cart-plus"></i> Ordenar
+                  </button>
+                </div>
+                <div class="pin-bottom-actions">
+                  <span style="color: white; font-weight: 700; font-size: 0.85rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">🍟 Incluye papas</span>
+                  <button type="button" class="pin-circle-btn" onclick="openProductInLightbox('burger-especial')" title="Ver en pantalla completa">
+                    <i class="fa-solid fa-expand"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="hero-card-info pin-meta">
+              <div>
+                <h3 class="hero-card-name" style="font-size: 1.25rem;">Burguer Especial ENTRE 3</h3>
+                <p class="hero-card-meta">Carne premium de res, doble queso de hebra, tocino crujiente & piña</p>
+              </div>
+              <div class="hero-card-price" style="color: var(--primary); font-size: 1.4rem; font-weight: 800;">$150</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FEATURES STRIP
+       ========================================================================== -->
+  <section class="features-strip section-reveal">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item scroll-reveal" style="--fade-idx: 0;">
+          <div class="feature-icon"><i class="fa-solid fa-drumstick-bite"></i></div>
+          <div class="feature-text">
+            <h4>100% Carne de Res</h4>
+            <p>Carne fresca y sazonada artesanalmente</p>
+          </div>
+        </div>
+        <div class="feature-item scroll-reveal" style="--fade-idx: 1;">
+          <div class="feature-icon"><i class="fa-solid fa-cheese"></i></div>
+          <div class="feature-text">
+            <h4>Queso de Hebra Fundido</h4>
+            <p>El auténtico toque generoso y gratinado</p>
+          </div>
+        </div>
+        <div class="feature-item scroll-reveal" style="--fade-idx: 2;">
+          <div class="feature-icon"><i class="fa-solid fa-motorcycle"></i></div>
+          <div class="feature-text">
+            <h4>Reparto en Nanchital</h4>
+            <p>Llega caliente y listo a tu colonia</p>
+          </div>
+        </div>
+        <div class="feature-item scroll-reveal" style="--fade-idx: 3;">
+          <div class="feature-icon"><i class="fa-brands fa-whatsapp"></i></div>
+          <div class="feature-text">
+            <h4>Pedido por WhatsApp</h4>
+            <p>Fácil, directo y sin complicaciones</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       PROMOTION BANNER
+       ========================================================================== -->
+  <div class="container" id="promo">
+    <div class="promo-banner scroll-reveal">
+      <div class="promo-content">
+        <h3>🍟 TODAS LAS BURGERS INCLUYEN PAPAS • ¡Y AHORA TUS HOT DOGS TAMBIÉN!</h3>
+        <p>Disfruta tus hamburguesas con papas fritas incluidas o elige tus Jochos Jumbos en combo con papas crujientes en Nanchital.</p>
+      </div>
+      <a href="#menu" class="btn btn-outline" style="background: white; color: #111; font-weight: 800;">
+        ¡Quiero la Mía!
+      </a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MENU SECTION
+       ========================================================================== -->
+  <section class="menu-section section-reveal" id="menu">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <span class="section-tag"><i class="fa-solid fa-thumbtack text-primary"></i> TABLERO DE ANTOJOS</span>
+        <h2 class="section-title">PINES GASTRONÓMICOS</h2>
+        <p class="section-subtitle">Explora nuestras especialidades a la plancha en Nanchital. Pasa el cursor o toca cada pin para ver fotos, personalizar con o sin papas y añadirlos a tu pedido.</p>
+      </div>
+
+      <!-- Menu Toolbar: Search Bar + Quick Suggestion Tags -->
+      <div class="menu-search-wrapper scroll-reveal" style="--fade-idx: 1;">
+        <div class="menu-search-bar" role="search">
+          <span class="search-icon-box" aria-hidden="true">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </span>
+          <input 
+            type="search" 
+            id="menu-search-input" 
+            class="menu-search-input" 
+            placeholder="Buscar hamburguesas, hot dogs, ingredientes (tocino, piña, queso)..." 
+            autocomplete="off"
+            spellcheck="false"
+            aria-label="Buscar hamburguesas o hot dogs"
+          >
+          <button 
+            type="button" 
+            id="menu-search-clear-btn" 
+            class="menu-search-clear-btn" 
+            aria-label="Limpiar búsqueda" 
+            title="Limpiar búsqueda"
+            style="display: none;"
+          >
+            <i class="fa-solid fa-circle-xmark"></i>
+          </button>
+          <div class="search-keyboard-hint" id="search-keyboard-hint">
+            <kbd>ESC</kbd>
+          </div>
+        </div>
+
+        <!-- Quick Search Suggestion Pills -->
+        <div class="search-quick-tags" id="search-quick-tags" aria-label="Sugerencias de búsqueda rápida">
+          <span class="quick-tags-title"><i class="fa-solid fa-fire"></i> Populares:</span>
+          <button type="button" class="quick-tag-chip" data-search="Tocino">🥓 Con Tocino</button>
+          <button type="button" class="quick-tag-chip" data-search="Queso de hebra">🧀 Queso de Hebra</button>
+          <button type="button" class="quick-tag-chip" data-search="Hawaiana">🍍 Hawaiana</button>
+          <button type="button" class="quick-tag-chip" data-search="Especial">⭐ Especiales</button>
+          <button type="button" class="quick-tag-chip" data-search="Papas">🍟 Papas</button>
+        </div>
+      </div>
+
+      <!-- Filter Buttons (Pinterest Board Category Tabs) -->
+      <div class="menu-filters scroll-reveal" style="--fade-idx: 2;" role="tablist" aria-label="Filtro de categorías del tablero">
+        <button class="filter-btn active" data-category="all" role="tab" aria-selected="true">
+          <i class="fa-solid fa-thumbtack"></i> Todo el Tablero
+        </button>
+        <button class="filter-btn" data-category="burgers" role="tab" aria-selected="false">
+          <i class="fa-solid fa-burger"></i> Hamburguesas
+        </button>
+        <button class="filter-btn" data-category="hotdogs" role="tab" aria-selected="false">
+          <i class="fa-solid fa-hotdog"></i> Hot Dogs
+        </button>
+        <button class="filter-btn" data-category="extras" role="tab" aria-selected="false">
+          <i class="fa-solid fa-bowl-food"></i> Extras & Papas
+        </button>
+      </div>
+
+      <!-- Search & Filter Live Summary Bar -->
+      <div class="menu-search-status" id="menu-search-status" style="display: none;">
+        <div class="search-status-info">
+          <span class="search-status-pill" id="search-status-count">0 encontrados</span>
+          <span class="search-status-text" id="search-status-desc">para búsqueda</span>
+        </div>
+        <button type="button" class="search-status-clear" id="search-status-clear-btn">
+          <i class="fa-solid fa-xmark"></i> Quitar búsqueda
+        </button>
+      </div>
+
+      <!-- Pinterest Waterfall Masonry Feed (Dynamically Populated by JavaScript) -->
+      <div class="products-grid pin-board-grid" id="products-grid">
+        <!-- Dynamic Pinterest Pin Cards will be injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Pinterest Pin Detail / Fullscreen Lightbox Modal -->
+  <div class="gallery-lightbox pin-detail-lightbox" id="gallery-lightbox" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-dialog">
+      <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Cerrar modal">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div class="lightbox-body">
+        <div class="lightbox-image-wrap">
+          <img src="" alt="" id="lightbox-img" class="lightbox-img">
+          <div class="lightbox-nav-buttons">
+            <button type="button" class="lightbox-nav-btn prev" id="lightbox-prev" aria-label="Foto anterior">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <button type="button" class="lightbox-nav-btn next" id="lightbox-next" aria-label="Foto siguiente">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+        <div class="lightbox-details">
+          <div class="pin-creator-lockup">
+            <img src="assets/images/entre_3_logo.jpg" alt="Logo ENTRE 3" class="pin-creator-avatar">
+            <div>
+              <div class="pin-creator-name">ENTRE 3 <i class="fa-solid fa-circle-check text-primary" style="font-size: 0.8rem;"></i></div>
+              <div class="pin-creator-subtitle">Especialistas a la Plancha • Nanchital de Lázaro Cárdenas del Río, Ver.</div>
+            </div>
+          </div>
+          <span class="lightbox-category" id="lightbox-category">Hamburguesas</span>
+          <h3 class="lightbox-title" id="lightbox-title">Título del Platillo</h3>
+          <p class="lightbox-desc" id="lightbox-desc">Descripción del platillo</p>
+          <div class="lightbox-price-tag" id="lightbox-price">$150 MXN</div>
+          <div class="lightbox-actions">
+            <button type="button" class="btn btn-primary" id="lightbox-order-btn">
+              <i class="fa-solid fa-cart-plus"></i> Ordenar Este Platillo
+            </button>
+            <button type="button" class="btn btn-whatsapp" id="lightbox-whatsapp-btn">
+              <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HOW TO ORDER (STEPS)
+       ========================================================================== -->
+  <section class="steps-section section-reveal" id="steps">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <span class="section-tag">FÁCIL Y RÁPIDO</span>
+        <h2 class="section-title">¿CÓMO HACER TU PEDIDO EN NANCHITAL?</h2>
+      </div>
+
+      <div class="steps-grid">
+        <div class="step-card scroll-reveal" style="--fade-idx: 0;">
+          <div class="step-number">1</div>
+          <h3>Arma tu Pedido</h3>
+          <p>Explora el tablero, elige tus hamburguesas o jochos jumbos y personalízalos (con o sin papas, extras, etc.).</p>
+        </div>
+        <div class="step-card scroll-reveal" style="--fade-idx: 1;">
+          <div class="step-number">2</div>
+          <h3>Revisa tu Carrito</h3>
+          <p>Verifica tu selección, escribe tu colonia y dirección en Nanchital y selecciona tu forma de pago.</p>
+        </div>
+        <div class="step-card scroll-reveal" style="--fade-idx: 2;">
+          <div class="step-number">3</div>
+          <h3>Envía por WhatsApp</h3>
+          <p>Con un solo clic se enviará tu pedido directo a nuestro WhatsApp para confirmarlo y ponerlo en la plancha.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       CART SLIDE-OVER DRAWER
+       ========================================================================== -->
+  <div class="cart-drawer-backdrop" id="cart-backdrop">
+    <aside class="cart-drawer" id="cart-drawer">
+      
+      <!-- Cart Header -->
+      <div class="cart-header">
+        <h3>
+          <i class="fa-solid fa-bag-shopping text-primary"></i> Tu Pedido 
+          <span style="font-size: 0.9rem; color: var(--text-muted); font-weight: 500;" id="cart-item-count-label">(0 items)</span>
+        </h3>
+        <button class="cart-close-btn" id="cart-close-btn" aria-label="Cerrar Carrito">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Cart Items List -->
+      <div class="cart-body" id="cart-items-container">
+        <!-- Rendered by JavaScript -->
+      </div>
+
+      <!-- Cart Footer / Checkout Actions -->
+      <div class="cart-footer" id="cart-footer">
+        
+        <!-- Order Type Selection -->
+        <div class="order-type-selector">
+          <button class="type-btn active" id="type-delivery-btn" data-type="delivery">
+            <i class="fa-solid fa-motorcycle"></i> A Domicilio
+          </button>
+          <button class="type-btn" id="type-pickup-btn" data-type="pickup">
+            <i class="fa-solid fa-store"></i> Para Recoger
+          </button>
+        </div>
+
+        <!-- Cost Summary -->
+        <div class="cart-summary">
+          <div class="summary-row">
+            <span>Subtotal:</span>
+            <span id="summary-subtotal"></span>
+          </div>
+          <div class="summary-row" id="delivery-cost-row">
+            <span>Costo de Envío:</span>
+            <span style="color: var(--secondary); font-weight: 600;">Según tu zona 🛵</span>
+          </div>
+          <div class="summary-row" id="wait-time-summary-row">
+            <span><i class="fa-solid fa-stopwatch text-secondary"></i> Espera Estimada:</span>
+            <span id="summary-wait-time" style="color: var(--secondary); font-weight: 700;">25 - 35 min</span>
+          </div>
+          <div class="summary-row total">
+            <span>Total Estimado:</span>
+            <span id="summary-total"></span>
+          </div>
+        </div>
+
+        <!-- Checkout Action Button -->
+        <button class="btn btn-whatsapp" id="checkout-trigger-btn" style="width: 100%;">
+          <i class="fa-brands fa-whatsapp"></i> Completar Pedido
+        </button>
+      </div>
+
+    </aside>
+  </div>
+
+  <!-- ==========================================================================
+       CHECKOUT MODAL (CUSTOMER INFO & ADDRESS)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="checkout-modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3><i class="fa-solid fa-clipboard-check text-primary"></i> Datos de Entrega</h3>
+        <button class="modal-close-btn" id="checkout-modal-close" aria-label="Cerrar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <form id="checkout-form">
+        <div class="form-group">
+          <label class="form-label" for="customer-name">Nombre Completo *</label>
+          <input type="text" id="customer-name" class="form-input" placeholder="Ej. Gael Sánchez" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="customer-phone">Teléfono de Contacto *</label>
+          <input type="tel" id="customer-phone" class="form-input" placeholder="Ej. 55 1234 5678" required>
+        </div>
+
+        <div class="form-group" id="address-field-group">
+          <label class="form-label" for="customer-address">Dirección Completa de Entrega *</label>
+          <textarea id="customer-address" class="form-textarea" placeholder="Calle, Número exterior/interior, Colonia y Referencias (ej. frente al parque)" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="payment-method">Forma de Pago *</label>
+          <select id="payment-method" class="form-select">
+            <option value="Efectivo">Efectivo al recibir</option>
+            <option value="Efectivo (Cambio)">Efectivo (Requiero cambio)</option>
+            <option value="Transferencia">Transferencia bancaria</option>
+          </select>
+        </div>
+
+        <div class="form-group" id="change-field-group" style="display: none;">
+          <label class="form-label" for="payment-change">¿Con cuánto billete pagarás?</label>
+          <input type="text" id="payment-change" class="form-input" placeholder="Ej. Pagaré con billete de ">
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="order-notes">Notas / Instrucciones Adicionales</label>
+          <input type="text" id="order-notes" class="form-input" placeholder="Ej. Tocar el timbre, salsa extra, etc.">
+        </div>
+
+        <button type="submit" class="btn btn-whatsapp" style="width: 100%; margin-top: 10px;">
+          <i class="fa-brands fa-whatsapp"></i> Enviar Pedido a WhatsApp
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       PRODUCT CUSTOMIZE MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="customize-modal-backdrop">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 id="modal-product-title">Personalizar Producto</h3>
+        <button class="modal-close-btn" id="customize-modal-close" aria-label="Cerrar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div id="customize-product-details" style="margin-bottom: 18px;">
+        <!-- Injected dynamically -->
+      </div>
+
+      <!-- Hot Dog Fries Presentation Choice (Only for Hot Dogs) -->
+      <div class="options-group" id="hotdog-fries-selection-group" style="display: none;">
+        <div class="options-title"><i class="fa-solid fa-french-fries text-secondary"></i> ¿Cómo quieres tu Jocho?</div>
+        <div class="fries-options-grid" id="hotdog-fries-options-container">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Exclusions Section -->
+      <div class="options-group">
+        <div class="options-title">¿Deseas quitar algún ingrediente?</div>
+        <div id="exclusions-options-container">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Extras Section -->
+      <div class="options-group">
+        <div class="options-title">Ingredientes Extras (Opcional)</div>
+        <div id="extras-options-container">
+          <!-- Injected dynamically -->
+        </div>
+      </div>
+
+      <!-- Custom Notes Input -->
+      <div class="form-group">
+        <label class="form-label" for="custom-item-note">Instrucción Especial para este platillo</label>
+        <input type="text" id="custom-item-note" class="form-input" placeholder="Ej. Bien dorado, aderezo aparte...">
+      </div>
+
+      <!-- Modal Bottom Actions -->
+      <div style="display: flex; gap: 12px; align-items: center; margin-top: 20px;">
+        <button class="btn btn-primary" id="confirm-customize-add-btn" style="flex-grow: 1;">
+          <i class="fa-solid fa-cart-plus"></i> Añadir con Cambios (<span id="modal-calculated-price"></span>)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       MOBILE FLOATING CART TRIGGER
+       ========================================================================== -->
+  <div class="mobile-cart-float" id="mobile-cart-float">
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <i class="fa-solid fa-bag-shopping"></i>
+      <span>Ver Carrito (<span id="mobile-cart-count">0</span>)</span>
+    </div>
+    <span id="mobile-cart-total"></span>
+  </div>
+
+  <!-- ==========================================================================
+       TOAST FEEDBACK NOTIFICATION
+       ========================================================================== -->
+  <div class="toast" id="toast">
+    <i class="fa-solid fa-circle-check text-primary"></i>
+    <span id="toast-message">Producto añadido al pedido</span>
+  </div>
+
+  <!-- ==========================================================================
+       CONTACT & DELIVERY COVERAGE MAP SECTION
+       ========================================================================== -->
+  <section class="contact-section section-reveal" id="contacto">
+    <div class="container">
+      <div class="section-header scroll-reveal">
+        <span class="section-tag"><i class="fa-solid fa-map-location-dot"></i> ZONA DE ENTREGA Y CONTACTO</span>
+        <h2 class="section-title">COBERTURA A DOMICILIO EN NANCHITAL</h2>
+        <p class="section-subtitle">Llevamos el auténtico sabor de la plancha calientito directo hasta tu puerta en Nanchital de Lázaro Cárdenas del Río, Veracruz y zonas conurbadas.</p>
+      </div>
+
+      <!-- Delivery Coverage Map Card -->
+      <div class="coverage-map-card scroll-reveal" style="--fade-idx: 1;">
+        <div class="coverage-card-main">
+          
+          <!-- Static Styled Map Visual Layer (Nanchital de Lázaro Cárdenas del Río) -->
+          <div class="coverage-map-visual" role="img" aria-label="Mapa estático de la zona de cobertura del servicio a domicilio en Nanchital de Lázaro Cárdenas del Río de ENTRE 3">
+            <svg class="static-map-svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="mapBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#141926"/>
+                  <stop offset="100%" stop-color="#0a0d14"/>
+                </linearGradient>
+                <linearGradient id="riverGrad" x1="0%" y1="0%" x2="100%" y2="50%">
+                  <stop offset="0%" stop-color="#0e2a4a"/>
+                  <stop offset="100%" stop-color="#091b30"/>
+                </linearGradient>
+                <radialGradient id="zone1Radial" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#25D366" stop-opacity="0.32"/>
+                  <stop offset="85%" stop-color="#25D366" stop-opacity="0.10"/>
+                  <stop offset="100%" stop-color="#25D366" stop-opacity="0.0"/>
+                </radialGradient>
+                <radialGradient id="zone2Radial" cx="50%" cy="50%" r="50%">
+                  <stop offset="0%" stop-color="#ffb703" stop-opacity="0.22"/>
+                  <stop offset="85%" stop-color="#ffb703" stop-opacity="0.08"/>
+                  <stop offset="100%" stop-color="#ffb703" stop-opacity="0.0"/>
+                </radialGradient>
+                <filter id="glowPin" x="-50%" y="-50%" width="200%" height="200%">
+                  <feGaussianBlur stdDeviation="5" result="blur" />
+                  <feMerge>
+                    <feMergeNode in="blur" />
+                    <feMergeNode in="SourceGraphic" />
+                  </feMerge>
+                </filter>
+              </defs>
+
+              <!-- Map Background -->
+              <rect width="800" height="500" fill="url(#mapBgGrad)"/>
+
+              <!-- Water Bodies (Río Coatzacoalcos - Límite Norte de Nanchital) -->
+              <path d="M0,0 L800,0 L800,65 Q620,95 480,110 Q320,120 180,95 L0,80 Z" fill="url(#riverGrad)" stroke="#1a3554" stroke-width="1.8"/>
+              <text x="400" y="42" fill="#436b94" font-size="11" font-weight="700" letter-spacing="2" text-anchor="middle">RÍO COATZACOALCOS • LÍMITE NORTE</text>
+
+              <!-- Arroyo Tepeyac / Molacán (afluente sur-este) -->
+              <path d="M720,105 Q660,220 690,340 Q710,430 760,500 L710,500 Q660,420 640,320 Q610,210 680,105 Z" fill="url(#riverGrad)" stroke="#1a3554" stroke-width="1.2" opacity="0.85"/>
+              <text x="680" y="450" fill="#2d4c70" font-size="9" font-weight="600" transform="rotate(-80, 680, 450)" letter-spacing="1">ARROYO TEPEYAC</text>
+
+              <!-- Local Road Network Grid of Nanchital -->
+              <g stroke="#1e2738" stroke-width="1.5" stroke-linecap="round">
+                <line x1="40" y1="160" x2="760" y2="160"/>
+                <line x1="40" y1="225" x2="760" y2="225"/>
+                <line x1="40" y1="285" x2="760" y2="285"/>
+                <line x1="60" y1="350" x2="740" y2="350"/>
+                <line x1="80" y1="410" x2="700" y2="410"/>
+                
+                <line x1="130" y1="90" x2="130" y2="470"/>
+                <line x1="220" y1="110" x2="220" y2="470"/>
+                <line x1="310" y1="120" x2="310" y2="470"/>
+                <line x1="430" y1="120" x2="430" y2="470"/>
+                <line x1="530" y1="115" x2="530" y2="470"/>
+                <line x1="630" y1="100" x2="630" y2="470"/>
+              </g>
+
+              <!-- Main Arteries & Avenues of Nanchital -->
+              <g stroke="#323e59" stroke-width="3.2" stroke-linecap="round">
+                <path d="M50,195 Q260,205 430,240 Q620,270 770,300"/>
+                <path d="M120,120 Q260,240 430,260 Q550,280 720,380"/>
+                <line x1="430" y1="115" x2="430" y2="480"/>
+                <line x1="60" y1="285" x2="760" y2="285"/>
+              </g>
+
+              <!-- Avenue Name Signs -->
+              <text x="80" y="185" fill="#6f819e" font-size="9" font-weight="700" letter-spacing="0.5">BLVD. JOSÉ LÓPEZ PORTILLO</text>
+              <text x="140" y="275" fill="#6f819e" font-size="9" font-weight="700" letter-spacing="0.5">AV. LÁZARO CÁRDENAS</text>
+              <text x="160" y="340" fill="#6f819e" font-size="9" font-weight="700" letter-spacing="0.5">AV. REVOLUCIÓN</text>
+              <text x="440" y="440" fill="#6f819e" font-size="9" font-weight="700" letter-spacing="0.5">CARR. NANCHITAL - CUATRO CAMINOS</text>
+
+              <!-- Key Neighborhoods / Colonias in Nanchital -->
+              <text x="450" y="240" fill="#e2e8f0" font-size="11.5" font-weight="800">COL. CENTRO (NANCHITAL)</text>
+              <text x="240" y="180" fill="#94a3b8" font-size="10" font-weight="600">GUADALUPE TEPEYAC</text>
+              <text x="560" y="210" fill="#94a3b8" font-size="10" font-weight="600">SAN MIGUEL ARCÁNGEL</text>
+              <text x="280" y="325" fill="#94a3b8" font-size="10" font-weight="600">COL. BRUNET</text>
+              <text x="150" y="320" fill="#94a3b8" font-size="10" font-weight="600">SAN REGINO</text>
+              <text x="560" y="320" fill="#94a3b8" font-size="10" font-weight="600">LA CANDELARIA</text>
+              <text x="230" y="395" fill="#64748b" font-size="9.5" font-weight="600">MANUEL RAMÍREZ</text>
+              <text x="530" y="405" fill="#64748b" font-size="9.5" font-weight="600">CUATRO CAMINOS</text>
+
+              <!-- Delivery Zone 2: Radius 8km (Extended Reparto) -->
+              <circle cx="430" cy="250" r="190" fill="url(#zone2Radial)" stroke="#ffb703" stroke-width="1.8" stroke-dasharray="6,4"/>
+              
+              <!-- Delivery Zone 1: Radius 4km (Fast Reparto Inmediato Nanchital) -->
+              <circle cx="430" cy="250" r="115" fill="url(#zone1Radial)" stroke="#25D366" stroke-width="2.2"/>
+
+              <!-- Pulse Radar Ring -->
+              <circle cx="430" cy="250" r="115" fill="none" stroke="#25D366" stroke-width="1" stroke-opacity="0.5" class="radar-pulse-ring"/>
+
+              <!-- Distance Radius Badges on Map -->
+              <g transform="translate(525, 215)">
+                <rect width="102" height="22" rx="11" fill="#0d111a" stroke="#25D366" stroke-width="1.2"/>
+                <text x="51" y="15" fill="#25D366" font-size="10" font-weight="800" text-anchor="middle">Zona 1 (Nanchital)</text>
+              </g>
+
+              <g transform="translate(600, 295)">
+                <rect width="102" height="22" rx="11" fill="#0d111a" stroke="#ffb703" stroke-width="1.2"/>
+                <text x="51" y="15" fill="#ffb703" font-size="10" font-weight="800" text-anchor="middle">Zona 2 (Extendida)</text>
+              </g>
+
+              <!-- Central Headquarters Pin (Cocina ENTRE 3 Nanchital) -->
+              <g transform="translate(430, 250)">
+                <circle cx="0" cy="0" r="18" fill="#E60023" opacity="0.3" class="store-pulse-beacon"/>
+                <circle cx="0" cy="0" r="10" fill="#E60023" opacity="0.7"/>
+                <circle cx="0" cy="0" r="6" fill="#ffb703"/>
+                <!-- Tooltip Label Bubble -->
+                <g transform="translate(-85, -52)">
+                  <rect width="170" height="34" rx="8" fill="#E60023" filter="url(#glowPin)"/>
+                  <polygon points="85,34 78,42 92,42" fill="#E60023"/>
+                  <text x="85" y="16" fill="#ffffff" font-size="10" font-weight="800" text-anchor="middle" letter-spacing="0.5">🍔 COCINA ENTRE 3</text>
+                  <text x="85" y="27" fill="#ffe0b2" font-size="8.5" font-weight="700" text-anchor="middle">Nanchital de Lázaro Cárdenas, Ver.</text>
+                </g>
+              </g>
+
+              <!-- Compass Rose -->
+              <g transform="translate(735, 75)">
+                <circle cx="0" cy="0" r="16" fill="#0f1420" stroke="#2c374d" stroke-width="1.2"/>
+                <polygon points="0,-11 3.5,-2 0,0" fill="#E60023"/>
+                <polygon points="0,-11 -3.5,-2 0,0" fill="#ffffff"/>
+                <polygon points="0,11 2.5,2 0,0" fill="#64748b"/>
+                <polygon points="0,11 -2.5,2 0,0" fill="#94a3b8"/>
+                <text x="0" y="-13" fill="#ffffff" font-size="8" font-weight="800" text-anchor="middle">N</text>
+              </g>
+            </svg>
+
+            <!-- Floating Status Badge -->
+            <div class="map-floating-status">
+              <span class="map-live-dot"></span>
+              <span>Servicio de Reparto Activo en Nanchital • Cobertura hasta 8 km</span>
+            </div>
+          </div>
+
+          <!-- Map Sidebar Information & Direct Actions -->
+          <div class="coverage-sidebar">
+            <div class="coverage-info-box">
+              <div class="coverage-status-tag">
+                <i class="fa-solid fa-motorcycle text-primary"></i>
+                <span>Envíos Calientitos en Nanchital</span>
+              </div>
+              <h3 class="coverage-box-title">Zonas de Reparto y Tiempos</h3>
+              <p class="coverage-box-desc">
+                Despachamos tus hamburguesas y jochos empacados para conservar el calor, el queso de hebra fundido y el toque crujiente de las papas en todo Nanchital de Lázaro Cárdenas del Río.
+              </p>
+            </div>
+
+            <!-- Zones Detail Cards -->
+            <div class="coverage-zones-list">
+              <!-- Zona 1 -->
+              <div class="zone-item zone-primary scroll-reveal" style="--fade-idx: 0;">
+                <div class="zone-badge-dot"></div>
+                <div class="zone-item-content">
+                  <div class="zone-item-header">
+                    <h4>Zona 1: Cobertura Inmediata Nanchital (0 - 4 km)</h4>
+                    <span class="zone-time-pill"><i class="fa-regular fa-clock"></i> 20 - 30 min</span>
+                  </div>
+                  <p class="zone-item-text">
+                    Col. Centro, Guadalupe Tepeyac, San Miguel Arcángel, Brunet, San Regino, La Candelaria y colonias céntricas.
+                  </p>
+                  <span class="zone-fare-note">✓ Tarifa estándar preferencial</span>
+                </div>
+              </div>
+
+              <!-- Zona 2 -->
+              <div class="zone-item zone-secondary scroll-reveal" style="--fade-idx: 1;">
+                <div class="zone-badge-dot"></div>
+                <div class="zone-item-content">
+                  <div class="zone-item-header">
+                    <h4>Zona 2: Cobertura Extendida (4 - 8 km)</h4>
+                    <span class="zone-time-pill"><i class="fa-regular fa-clock"></i> 30 - 45 min</span>
+                  </div>
+                  <p class="zone-item-text">
+                    Cuatro Caminos, Manuel Ramírez, Polvorín, áreas conurbadas e Ixhuatlán del Sureste.
+                  </p>
+                  <span class="zone-fare-note">🛵 Costo moderado según distancia</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="coverage-action-group">
+              <a href="https://wa.me/529213033313?text=%C2%A1Hola%20ENTRE%203!%20%F0%9F%93%8D%20Me%20gustar%C3%ADa%20consultar%20si%20llegan%20a%20mi%20colonia%20en%20Nanchital%20de%20L%C3%A1zaro%20C%C3%A1rdenas%20del%20R%C3%ADo%20y%20el%20costo%20de%20env%C3%ADo.%20Mi%20ubicaci%C3%B3n%20es%3A%20" 
+                 target="_blank" 
+                 class="btn btn-whatsapp coverage-cta-btn"
+                 rel="noopener noreferrer">
+                <i class="fa-brands fa-whatsapp"></i> Consultar Mi Colonia en WhatsApp
+              </a>
+              <a href="tel:+529213033313" class="btn btn-outline coverage-call-btn">
+                <i class="fa-solid fa-phone"></i> Llamar al 921-303-3313
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer section-reveal">
+    <div class="container">
+      <div class="footer-grid">
+        
+        <!-- Brand Col -->
+        <div class="footer-brand">
+          <div class="logo">
+            <img src="assets/images/entre_3_logo.jpg" alt="Logo ENTRE 3" class="brand-logo-img">
+            <div class="logo-text-box">
+              <div class="logo-main-text">ENTRE<span class="logo-accent-num">3</span></div>
+              <div class="logo-slogan-text">Tres amigos, un mismo sabor</div>
+            </div>
+          </div>
+          <p>El auténtico sabor a la plancha en Nanchital de Lázaro Cárdenas del Río, Veracruz. Hamburguesas 100% de res con papas incluidas, hot dogs especiales cargados y los mejores ingredientes. Envíos directos y pedidos por WhatsApp.</p>
+        </div>
+
+        <!-- Hours & Service Col -->
+        <div class="footer-col">
+          <h4><i class="fa-regular fa-clock text-primary"></i> Horarios de Atención</h4>
+          <ul>
+            <li>Martes a Domingo: 6:00 PM - 12:00 AM</li>
+            <li>Lunes: Cerrado</li>
+            <li style="color: var(--secondary); font-weight: 700;">🛵 Servicio a Domicilio en Nanchital y Para Llevar</li>
+          </ul>
+        </div>
+
+        <!-- Contact Col -->
+        <div class="footer-col">
+          <h4><i class="fa-solid fa-phone text-primary"></i> Contacto y Pedidos</h4>
+          <ul>
+            <li>WhatsApp: <a href="https://wa.me/529213033313" target="_blank" style="color: var(--whatsapp); font-weight: 700;">Hacer Pedido en WhatsApp</a></li>
+            <li>Teléfono: +52 (921) 303 3313</li>
+            <li>Ubicación y cobertura: Nanchital de Lázaro Cárdenas del Río, Veracruz y zonas aledañas</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 ENTRE 3. Nanchital de Lázaro Cárdenas del Río, Veracruz. Todos los derechos reservados. Hamburguesas • Hot Dogs • Papas. Tres amigos, un mismo sabor.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>
