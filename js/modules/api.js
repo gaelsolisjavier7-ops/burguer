@@ -5,6 +5,50 @@
 import { STORE_CONFIG } from '../products.js';
 import { getCart, calculateCartTotals, clearCart, updateCartUI } from './cart.js';
 
+/**
+ * Guarda el pedido en Firestore para el panel de finanzas.
+ * Se invoca en segundo plano (sin await) desde el checkout, para no retrasar
+ * ni bloquear la apertura de WhatsApp.
+ */
+async function guardarPedidoEnFirestore({ name, phone, address, orderType, payment, changeAmount, notes, cart, subtotal }) {
+  const { initializeApp, getApps, getApp } = await import('https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js');
+  const { getFirestore, collection, addDoc, serverTimestamp } = await import('https://www.gstatic.com/firebasejs/10.12.0/firebase-firestore.js');
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCYmj4iaPU-Ku6edzajvJXJtnX0qSSqTO4",
+    authDomain: "entre3-finanzas.firebaseapp.com",
+    projectId: "entre3-finanzas",
+    storageBucket: "entre3-finanzas.firebasestorage.app",
+    messagingSenderId: "352611680426",
+    appId: "1:352611680426:web:1c3e851d14f2d542da10d3"
+  };
+
+  const app = getApps().length === 0 ? initializeApp(firebaseConfig) : getApp();
+  const db = getFirestore(app);
+
+  await addDoc(collection(db, 'pedidos'), {
+    fecha: serverTimestamp(),
+    cliente: { nombre: name, telefono: phone, direccion: address },
+    modalidad: orderType,
+    metodo_pago: payment,
+    cambio: changeAmount || null,
+    notas: notes || null,
+    productos: cart.map(i => ({
+      nombre: i.name,
+      cantidad: i.quantity,
+      precio_unitario: i.totalPrice,
+      subtotal: i.totalPrice * i.quantity,
+      extras: i.extras || [],
+      exclusiones: i.exclusions || [],
+      nota: i.note || null
+    })),
+    subtotal: subtotal,
+    total: subtotal,
+    estado: 'Pendiente',
+    origen: 'web'
+  });
+}
+
 export function handleCheckoutSubmit(e) {
   e.preventDefault();
 
@@ -76,7 +120,17 @@ export function handleCheckoutSubmit(e) {
   // Enviar a la API de WhatsApp
   const whatsappUrl = `https://wa.me/${STORE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message)}`;
   
+  // 1. Abrir WhatsApp INMEDIATAMENTE (síncrono, preserva user activation)
   window.open(whatsappUrl, '_blank');
+
+  // 2. Guardar en Firestore en background (sin bloquear)
+  //    Se pasa una COPIA PROFUNDA del carrito (tomada aquí, antes de clearCart())
+  //    para que el guardado no dependa de la semántica de clearCart().
+  guardarPedidoEnFirestore({
+    name, phone, address, orderType, payment, changeAmount, notes,
+    cart: JSON.parse(JSON.stringify(cart)),
+    subtotal
+  }).catch(err => console.warn('⚠️ No se pudo guardar el pedido en Firestore:', err));
 
   // Cerrar modal de checkout y drawer del carrito
   const checkoutBackdrop = document.getElementById('checkout-modal-backdrop');
