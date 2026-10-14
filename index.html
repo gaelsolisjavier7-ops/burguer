@@ -13,7 +13,7 @@
   <!-- Google Fonts: Bebas Neue, Outfit, Plus Jakarta Sans -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -123,7 +123,7 @@
           <!-- Pinterest Board Stats / Tags -->
           <div class="pinterest-board-stats">
             <div class="board-stat-item">
-              <span class="stat-number">10</span>
+              <span class="stat-number" id="menu-pin-count">11</span>
               <span class="stat-label">Pines de Menú</span>
             </div>
             <div class="board-stat-divider">·</div>
@@ -576,12 +576,38 @@
   <!-- ==========================================================================
        MOBILE FLOATING CART TRIGGER
        ========================================================================== -->
-  <div class="mobile-cart-float" id="mobile-cart-float">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <i class="fa-solid fa-bag-shopping"></i>
-      <span>Ver Carrito (<span id="mobile-cart-count">0</span>)</span>
+  <!-- ==========================================================================
+       BARRA FLOTANTE INFERIOR DE PEDIDO (rediseño Stitch)
+       "Tu Pedido: N productos ($X) | VER PEDIDO | CONFIRMAR AHORA"
+       Se conserva id="mobile-cart-float" y los contadores para no romper la
+       lógica existente del carrito en js/modules/cart.js
+       ========================================================================== -->
+  <div class="mobile-cart-float order-float-bar" id="mobile-cart-float">
+    <div class="order-float-inner">
+
+      <div class="order-float-info">
+        <span class="order-float-icon" aria-hidden="true">
+          <i class="fa-solid fa-bag-shopping"></i>
+        </span>
+        <span class="order-float-text">
+          <span class="order-float-label">Tu Pedido:</span>
+          <span class="order-float-count">
+            <span id="mobile-cart-count">0</span> <span id="order-float-count-label">productos</span>
+            <span id="mobile-cart-total"></span>
+          </span>
+        </span>
+      </div>
+
+      <div class="order-float-actions">
+        <button type="button" class="order-float-btn" id="order-float-view-btn">
+          Ver Pedido
+        </button>
+        <button type="button" class="order-float-btn primary" id="order-float-confirm-btn">
+          Confirmar Ahora
+        </button>
+      </div>
+
     </div>
-    <span id="mobile-cart-total"></span>
   </div>
 
   <!-- ==========================================================================
@@ -852,6 +878,19 @@
       </div>
     </div>
   </footer>
+
+  <!-- ==========================================================================
+       BOTÓN FLOTANTE DE WHATSAPP
+       ========================================================================== -->
+  <a
+    id="whatsapp-float-btn"
+    class="fa-brands fa-whatsapp"
+    href="https://wa.me/529213033313?text=%C2%A1Hola!%20Vengo%20de%20la%20p%C3%A1gina%20web%20y%20quiero%20hacer%20un%20pedido."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Pedir por WhatsApp"
+    title="Pedir por WhatsApp"
+  ></a>
 
   <!-- Scripts -->
     <script type="module" src="js/main.js"></script>

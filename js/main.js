@@ -668,6 +668,7 @@ window.showToast = showToast;
 function init() {
   applyTheme(getCurrentTheme(), false);
   renderProducts();
+  updateMenuCount();
   initScrollAnimations();
   updateCartUI();
   updateStoreHoursUI();
@@ -676,6 +677,14 @@ function init() {
   setInterval(() => {
     updateStoreHoursUI();
   }, 60000);
+}
+
+// Mantiene el contador "N Pines de Menú" del hero sincronizado con MENU_DATA
+function updateMenuCount() {
+  const menuCountEl = document.getElementById('menu-pin-count');
+  if (menuCountEl) {
+    menuCountEl.textContent = MENU_DATA.length;
+  }
 }
 
 function setupEventListeners() {
@@ -742,6 +751,31 @@ function setupEventListeners() {
     });
   }
 
+  // =========================================================================
+  // BARRA FLOTANTE INFERIOR DE PEDIDO ("Tu Pedido | VER PEDIDO | CONFIRMAR AHORA")
+  // =========================================================================
+  const orderFloatViewBtn = document.getElementById('order-float-view-btn');
+  const orderFloatConfirmBtn = document.getElementById('order-float-confirm-btn');
+
+  if (orderFloatViewBtn) {
+    orderFloatViewBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      cartBackdrop.classList.add('active');
+    });
+  }
+
+  if (orderFloatConfirmBtn) {
+    orderFloatConfirmBtn.addEventListener('click', (e) => {
+      // Detener la propagación para que el contenedor no abra también el drawer
+      e.stopPropagation();
+      if (getCart().length === 0) {
+        showToast('Agrega productos al carrito primero.');
+        return;
+      }
+      checkoutModalBackdrop.classList.add('active');
+    });
+  }
+
   if (cartCloseBtn) {
     cartCloseBtn.addEventListener('click', () => {
       cartBackdrop.classList.remove('active');
@@ -799,6 +833,21 @@ function setupEventListeners() {
     checkoutModalBackdrop.addEventListener('click', (e) => {
       if (e.target === checkoutModalBackdrop) {
         checkoutModalBackdrop.classList.remove('active');
+      }
+    });
+  }
+
+  // Modal de personalización: cierre con la X y con clic en el fondo oscuro
+  if (customizeModalClose) {
+    customizeModalClose.addEventListener('click', () => {
+      customizeModalBackdrop.classList.remove('active');
+    });
+  }
+
+  if (customizeModalBackdrop) {
+    customizeModalBackdrop.addEventListener('click', (e) => {
+      if (e.target === customizeModalBackdrop) {
+        customizeModalBackdrop.classList.remove('active');
       }
     });
   }

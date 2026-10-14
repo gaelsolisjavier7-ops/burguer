@@ -53,6 +53,17 @@ export const MENU_DATA = [
     image: "assets/images/burger_cheese_pull_1790710190015.jpg",
     popular: true
   },
+  {
+    id: "burger-pollo",
+    name: "Burguer de Pollo",
+    category: "burgers",
+    price: 120,
+    badge: "Pollo Crujiente",
+    description: "Pechuga de pollo empanizada y cebolla caramelizada, lechuga fresca, queso amarillo derretido y aderezos de la casa.",
+    includes: "🍟 Incluye porción de papas",
+    image: "assets/images/burger_pollo.jpg",
+    popular: false
+  },
 
   // --- SECCIÓN HOT DOGS (JOCHOS JUMBOS) ---
   {
@@ -131,7 +142,7 @@ export const MENU_DATA = [
     id: "extra-papas",
     name: "Orden Extra de Papas",
     category: "extras",
-    price: 40,
+    price: 60,
     badge: "Acompañamiento",
     aspectClass: "pin-aspect-tall",
     description: "Papas a la francesa doraditas y sazonadas con sal y aderezos al gusto.",
