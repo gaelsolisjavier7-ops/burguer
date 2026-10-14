@@ -4,86 +4,112 @@
    ========================================================================== */
 
 :root, [data-theme="dark"] {
-  /* Colors - Pinterest Dark Theme */
-  --bg-main: #111216;
-  --bg-surface: #181920;
-  --bg-card: #20222b;
-  --bg-card-hover: #282a36;
-  --bg-glass: rgba(24, 25, 32, 0.88);
-  --header-scrolled-bg: rgba(17, 18, 22, 0.95);
-  
-  --primary: #E60023; /* Iconic Pinterest Red */
-  --primary-hover: #b6001a;
-  --primary-glow: rgba(230, 0, 35, 0.35);
-  --primary-gradient: linear-gradient(135deg, #E60023 0%, #ad081b 100%);
-  
-  --secondary: #ffb703;
-  --secondary-glow: rgba(255, 183, 3, 0.25);
-  
-  --whatsapp: #25D366;
-  --whatsapp-hover: #20ba59;
-  --whatsapp-glow: rgba(37, 211, 102, 0.3);
-  
-  --text-main: #ffffff;
-  --text-muted: #a3a8b8;
-  --text-dim: #6e7384;
-  
+  /* Colors - Dark Smoke & Ember Luxe (paleta del diseño oscuro de Stitch) */
+  --bg-main: #0D0F12;
+  --bg-surface: #161920;
+  --bg-card: #1A1D24;
+  --bg-card-hover: #222630;
+  --bg-glass: rgba(22, 25, 32, 0.90);
+  --header-scrolled-bg: rgba(22, 25, 32, 0.94);
+
+  --primary: #FF4D00; /* Ember */
+  --primary-hover: #FF5E1E; /* Flame */
+  --primary-glow: rgba(255, 77, 0, 0.40);
+  --primary-gradient: linear-gradient(135deg, #FF4D00 0%, #FF5E1E 55%, #FF8A00 100%);
+
+  --secondary: #FFB703; /* Amber Gold */
+  --secondary-hover: #F59E0B;
+  --secondary-glow: rgba(255, 183, 3, 0.30);
+
+  --whatsapp: #059669; /* Emerald 600 */
+  --whatsapp-hover: #10B981; /* Emerald 500 */
+  --whatsapp-glow: rgba(16, 185, 129, 0.35);
+
+  --text-main: #E2E8F0;
+  --text-muted: #B8C0CC;
+  --text-dim: #71717A;
+
   --border-light: rgba(255, 255, 255, 0.08);
-  --border-accent: rgba(230, 0, 35, 0.4);
-  
+  --border-strong: rgba(255, 255, 255, 0.14);
+  --border-accent: rgba(255, 77, 0, 0.45);
+
+  /* Superficies auxiliares del diseño Stitch */
+  --surface-pill: #1C2028;
+  --surface-pill-hover: #252A36;
+  --surface-inset: #12151B;
+  --surface-footer: #090B0E;
+
   /* Fonts */
-  --font-display: 'Bebas Neue', 'Outfit', sans-serif;
+  --font-display: 'Oswald', 'Bebas Neue', 'Outfit', sans-serif;
   --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  
+
   /* Shadows */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.3);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.45);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.6);
-  --shadow-pin: 0 12px 32px rgba(0, 0, 0, 0.45);
-  --shadow-glow: 0 0 30px var(--primary-glow);
-  
-  /* Layout - Pinterest Rounding */
-  --radius-sm: 10px;
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.40);
+  --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.55);
+  --shadow-lg: 0 20px 44px rgba(0, 0, 0, 0.70);
+  --shadow-pin: 0 16px 36px -12px rgba(0, 0, 0, 0.85);
+  --shadow-glow: 0 0 35px -5px rgba(255, 77, 0, 0.45);
+  --shadow-glow-amber: 0 0 25px -3px rgba(255, 183, 3, 0.35);
+
+  /* Layout */
+  --radius-sm: 12px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-pin: 24px;
   --radius-full: 9999px;
   --transition: all 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Atmósfera */
+  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(255, 77, 0, 0.16) 0%, rgba(255, 183, 3, 0.05) 35%, transparent 70%);
+  --scrollbar-track: #11141A;
+  --scrollbar-thumb: #2D3748;
 }
 
 [data-theme="light"] {
-  /* Colors - Light Theme (Pinterest Classic Clean White) */
-  --bg-main: #ffffff;
-  --bg-surface: #f7f7f8;
-  --bg-card: #ffffff;
-  --bg-card-hover: #f0f0f2;
-  --bg-glass: rgba(255, 255, 255, 0.94);
-  --header-scrolled-bg: rgba(255, 255, 255, 0.97);
-  
-  --primary: #E60023; /* Iconic Pinterest Red */
-  --primary-hover: #b6001a;
-  --primary-glow: rgba(230, 0, 35, 0.25);
-  --primary-gradient: linear-gradient(135deg, #E60023 0%, #ad081b 100%);
-  
-  --secondary: #d97706;
-  --secondary-glow: rgba(217, 119, 6, 0.2);
-  
-  --whatsapp: #25D366;
-  --whatsapp-hover: #20ba59;
-  --whatsapp-glow: rgba(37, 211, 102, 0.2);
-  
-  --text-main: #111111;
-  --text-muted: #5f5f5f;
-  --text-dim: #8e8e8e;
-  
-  --border-light: rgba(0, 0, 0, 0.08);
-  --border-accent: rgba(230, 0, 35, 0.3);
-  
-  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.09);
-  --shadow-lg: 0 16px 40px rgba(0, 0, 0, 0.12);
-  --shadow-pin: 0 8px 24px rgba(0, 0, 0, 0.12);
-  --shadow-glow: 0 0 25px rgba(230, 0, 35, 0.18);
+  /* Colors - Warm Bistro Grill (paleta del diseño claro de Stitch) */
+  --bg-main: #FAF7F2;
+  --bg-surface: #FFFDF9;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #FBF6EF;
+  --bg-glass: rgba(255, 253, 249, 0.94);
+  --header-scrolled-bg: rgba(255, 253, 249, 0.97);
+
+  --primary: #D9480F; /* Terracotta */
+  --primary-hover: #BF3904;
+  --primary-glow: rgba(217, 72, 15, 0.25);
+  --primary-gradient: linear-gradient(135deg, #D9480F 0%, #E8590C 55%, #F08C00 100%);
+
+  --secondary: #F59F00; /* Amber */
+  --secondary-hover: #D48806;
+  --secondary-glow: rgba(245, 159, 0, 0.22);
+
+  --whatsapp: #059669; /* Emerald 600 */
+  --whatsapp-hover: #047857; /* Emerald 700 */
+  --whatsapp-glow: rgba(5, 150, 105, 0.25);
+
+  --text-main: #1F1B18;
+  --text-muted: #71655C;
+  --text-dim: #948A80;
+
+  --border-light: #EBE3D7;
+  --border-strong: #DEC8B4;
+  --border-accent: rgba(217, 72, 15, 0.30);
+
+  --surface-pill: #F3ECE1;
+  --surface-pill-hover: #EDE3D6;
+  --surface-inset: #F7F1E8;
+  --surface-footer: #1F1B18;
+
+  --shadow-sm: 0 4px 20px -2px rgba(45, 34, 25, 0.05), 0 2px 6px -1px rgba(45, 34, 25, 0.03);
+  --shadow-md: 0 12px 28px -6px rgba(45, 34, 25, 0.12);
+  --shadow-lg: 0 16px 36px -6px rgba(180, 75, 20, 0.12), 0 6px 16px -2px rgba(45, 34, 25, 0.06);
+  --shadow-pin: 0 4px 20px -2px rgba(45, 34, 25, 0.06);
+  --shadow-glow: 0 8px 24px -4px rgba(217, 72, 15, 0.35);
+  --shadow-glow-amber: 0 8px 20px -4px rgba(245, 159, 0, 0.30);
+
+  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(217, 72, 15, 0.10) 0%, rgba(245, 159, 0, 0.05) 40%, transparent 70%);
+  --scrollbar-track: #F3ECE1;
+  --scrollbar-thumb: #D5C7B7;
 }
 
 /* Reset & Base */
@@ -5116,5 +5142,902 @@ mark.search-highlight {
     animation: none !important;
   }
 }
+
+/* ==========================================================================
+   REDISEÑO STITCH
+   Oscuro = "Dark Smoke & Ember Luxe"  |  Claro = "Warm Bistro Grill"
+   Capa de overrides al final del archivo: gana por orden de cascada.
+   Todo el color sale de las variables, así el modo Dark/Light se mantiene.
+   ========================================================================== */
+
+/* ---------- 1. Atmósfera global (Stitch) ---------- */
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  /* Espacio para la barra flotante inferior */
+  padding-bottom: 96px;
+}
+
+/* Resplandor ambiental superior (ember en oscuro / terracotta en claro) */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transform: none;
+  width: 100%;
+  height: 520px;
+  background: var(--ambient-glow);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* El override antiguo de modo claro tenía mayor especificidad: se realinea aquí */
+[data-theme="light"] body::before {
+  background: var(--ambient-glow);
+}
+
+::selection {
+  background: var(--primary);
+  color: #ffffff;
+}
+
+/* Scrollbar fina estilo Stitch */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+*::-webkit-scrollbar { width: 6px; height: 6px; }
+*::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+*::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 9999px; }
+*::-webkit-scrollbar-thumb:hover { background: var(--primary); }
+
+/* Tipografía display (Oswald) para titulares */
+.hero-title,
+.section-title,
+.hero-card-name,
+.modal-header h3,
+.cart-header h3,
+.lightbox-title,
+.coverage-box-title,
+.step-title {
+  font-family: var(--font-display);
+  letter-spacing: 0.01em;
+}
+
+/* ---------- 2. Header / Navegación (Stitch) ---------- */
+.header {
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.9);
+}
+
+.header.scrolled {
+  background: var(--header-scrolled-bg);
+  box-shadow: 0 12px 34px -16px rgba(0, 0, 0, 0.85);
+}
+
+/* Sello del logo con anillo degradado */
+.brand-logo-img {
+  border-radius: var(--radius-full);
+  padding: 2px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 55%, #FF8A00 100%);
+  box-shadow: var(--shadow-glow);
+  object-fit: cover;
+}
+
+.logo-main-text {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.logo-accent-num { color: var(--primary); }
+
+.logo-slogan-text {
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.62rem;
+  color: var(--text-dim);
+}
+
+.nav-link {
+  border-radius: var(--radius-sm);
+  padding: 8px 14px;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.nav-link:hover {
+  color: var(--text-main);
+  background: color-mix(in srgb, var(--text-main) 8%, transparent);
+}
+
+.nav-link.active {
+  color: var(--text-main);
+  background: transparent;
+}
+
+/* Subrayado tipo Stitch: solo en el enlace activo (se reutiliza el ::after original
+   para no duplicar el indicador) */
+.nav-link:hover::after {
+  width: 0;
+}
+.nav-link.active::after {
+  width: 100%;
+  bottom: 0;
+}
+
+/* Pastilla de estado (emerald, con punto pulsante) */
+.status-badge {
+  background: color-mix(in srgb, var(--whatsapp) 16%, transparent);
+  border: 1px solid color-mix(in srgb, var(--whatsapp) 45%, transparent);
+  color: var(--whatsapp-hover);
+  border-radius: var(--radius-full);
+  padding: 5px 12px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+[data-theme="light"] .status-badge { color: #047857; }
+
+.status-dot {
+  background: var(--whatsapp);
+  box-shadow: 0 0 0 0 var(--whatsapp-glow);
+  animation: stitchPulse 2s infinite;
+}
+
+@keyframes stitchPulse {
+  0%   { box-shadow: 0 0 0 0 var(--whatsapp-glow); }
+  70%  { box-shadow: 0 0 0 8px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+
+/* Botón de carrito del header: pastilla con badge y total */
+.cart-btn {
+  background: var(--surface-pill);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  padding: 8px 16px;
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+.cart-btn:hover {
+  background: var(--surface-pill-hover);
+  border-color: var(--border-accent);
+}
+
+.cart-badge {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  font-weight: 900;
+  box-shadow: 0 4px 12px -2px var(--primary-glow);
+}
+
+.cart-btn-total {
+  color: var(--secondary);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.theme-toggle-btn {
+  background: var(--surface-pill);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+.theme-toggle-btn:hover {
+  background: var(--surface-pill-hover);
+  border-color: var(--border-accent);
+}
+
+/* Modo claro: el header y sus controles con la paleta bistro */
+[data-theme="light"] .header {
+  border-bottom-color: var(--border-light);
+}
+[data-theme="light"] .header.scrolled {
+  background: var(--header-scrolled-bg);
+  box-shadow: 0 4px 20px rgba(45, 34, 25, 0.07);
+}
+[data-theme="light"] .nav-link { color: var(--text-muted); }
+[data-theme="light"] .nav-link:hover,
+[data-theme="light"] .nav-link.active { color: var(--text-main); }
+[data-theme="light"] .nav-links { background: var(--bg-surface); }
+[data-theme="light"] .theme-toggle-btn {
+  background: var(--surface-pill);
+  border-color: var(--border-light);
+  color: var(--secondary);
+  box-shadow: var(--shadow-sm);
+}
+[data-theme="light"] .theme-toggle-btn:hover {
+  background: var(--surface-pill-hover);
+  border-color: var(--primary);
+  box-shadow: 0 6px 18px -6px var(--primary-glow);
+}
+[data-theme="light"] .theme-tooltip {
+  background: var(--bg-card);
+  border-color: var(--border-light);
+  color: var(--text-main);
+  box-shadow: var(--shadow-md);
+}
+[data-theme="light"] .mobile-theme-btn {
+  background: var(--surface-pill);
+  border-color: var(--border-light);
+  color: var(--text-main);
+}
+[data-theme="light"] .mobile-theme-btn i { color: var(--secondary); }
+[data-theme="light"] .cart-btn {
+  background: var(--surface-pill);
+  border-color: var(--border-light);
+  color: var(--text-main);
+  box-shadow: var(--shadow-sm);
+}
+[data-theme="light"] .cart-btn:hover {
+  background: var(--surface-pill-hover);
+  border-color: var(--border-accent);
+}
+
+/* ---------- 3. Hero (Stitch) ---------- */
+.hero.pinterest-hero {
+  background: linear-gradient(180deg,
+      var(--bg-surface) 0%,
+      color-mix(in srgb, var(--bg-main) 70%, var(--bg-surface)) 45%,
+      var(--bg-main) 100%);
+  border-bottom: 1px solid var(--border-light);
+  overflow: hidden;
+}
+
+.pinterest-board-badge {
+  background: color-mix(in srgb, var(--primary) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--primary) 32%, transparent);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  padding: 7px 16px;
+  font-size: 0.7rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(8px);
+}
+
+.hero-title {
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 1.02;
+}
+
+.hero-title .highlight {
+  background: var(--primary-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+.hero-desc {
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Chips de estadísticas del hero */
+.board-stat-item,
+.pinterest-board-stats {
+  color: var(--text-main);
+}
+
+.pinterest-board-stats {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  padding: 10px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: var(--shadow-sm);
+}
+
+.stat-number { color: var(--secondary); font-weight: 900; }
+.stat-label { color: var(--text-muted); font-size: 0.74rem; font-weight: 700; }
+.board-stat-divider { color: var(--text-dim); }
+
+.hero-card-featured {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+}
+.hero-card-featured:hover {
+  border-color: var(--border-accent);
+  box-shadow: var(--shadow-glow);
+}
+
+.hero-glow-bg {
+  background: radial-gradient(circle at 50% 30%, var(--primary-glow) 0%, transparent 70%);
+}
+
+.hero-card-price { color: var(--secondary); }
+
+/* ---------- 4. Barra de filtros y búsqueda (Stitch) ---------- */
+.menu-filters,
+.filter-btn {
+  transition: var(--transition);
+}
+
+.filter-btn {
+  background: var(--surface-pill);
+  border: 1px solid var(--border-light);
+  color: var(--text-muted);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+}
+
+.filter-btn:hover {
+  background: var(--surface-pill-hover);
+  color: var(--text-main);
+}
+
+.filter-btn.active {
+  background: var(--primary-gradient);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: var(--shadow-glow);
+}
+
+.menu-search-bar {
+  background: var(--surface-pill);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  transition: var(--transition);
+}
+.menu-search-bar:focus-within {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+.menu-search-input { color: var(--text-main); }
+.menu-search-input::placeholder { color: var(--text-dim); }
+
+.quick-tag-chip {
+  background: var(--surface-pill);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  color: var(--text-muted);
+}
+.quick-tag-chip:hover {
+  background: var(--surface-pill-hover);
+  color: var(--text-main);
+  border-color: var(--border-strong);
+}
+.quick-tag-chip.active {
+  background: var(--primary-gradient);
+  border-color: transparent;
+  color: #ffffff;
+}
+
+.menu-search-status {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+}
+.search-status-pill {
+  background: color-mix(in srgb, var(--primary) 14%, transparent);
+  color: var(--primary);
+  border-radius: var(--radius-full);
+  font-weight: 800;
+}
+
+[data-theme="light"] .filter-btn {
+  background: var(--surface-pill);
+  border-color: var(--border-light);
+  color: var(--text-muted);
+}
+[data-theme="light"] .filter-btn:hover {
+  background: var(--surface-pill-hover);
+  color: var(--text-main);
+}
+[data-theme="light"] .filter-btn.active {
+  background: var(--primary-gradient);
+  color: #ffffff;
+}
+[data-theme="light"] .menu-search-bar {
+  background: #ffffff;
+  border-color: var(--border-light);
+}
+[data-theme="light"] .quick-tag-chip {
+  background: var(--surface-pill);
+  border-color: var(--border-light);
+  color: var(--text-muted);
+}
+[data-theme="light"] .quick-tag-chip.active {
+  background: var(--primary-gradient);
+  color: #ffffff;
+}
+
+/* ---------- 5. Tarjetas de producto / pines (Stitch) ---------- */
+.pin-card,
+.product-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-pin);
+  box-shadow: var(--shadow-pin);
+  transition: var(--transition);
+}
+
+.pin-card:hover,
+.product-card:hover {
+  border-color: color-mix(in srgb, var(--primary) 55%, transparent);
+  box-shadow: var(--shadow-glow);
+  transform: translateY(-4px);
+}
+
+.pin-img,
+.product-img { border-radius: var(--radius-md); }
+
+.pin-badge,
+.product-badge {
+  background: color-mix(in srgb, #000000 80%, transparent);
+  color: var(--secondary);
+  border: 1px solid color-mix(in srgb, var(--secondary) 50%, transparent);
+  border-radius: var(--radius-full);
+  font-weight: 900;
+  backdrop-filter: blur(6px);
+}
+
+.pin-title,
+.product-title { color: var(--text-main); font-weight: 800; }
+
+.pin-desc,
+.product-desc { color: var(--text-muted); }
+
+/* Precio en ámbar dorado */
+.pin-price-val,
+.price-dual-val,
+.hotdog-price-dual .price-dual-val {
+  color: var(--secondary);
+  font-weight: 900;
+}
+
+.price-dual-row.highlight .price-dual-val { color: var(--secondary); }
+
+.pin-fries-tag,
+.product-includes {
+  background: color-mix(in srgb, var(--secondary) 12%, transparent);
+  border: 1px solid color-mix(in srgb, var(--secondary) 28%, transparent);
+  color: var(--secondary);
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+}
+
+[data-theme="light"] .pin-card,
+[data-theme="light"] .product-card {
+  background: var(--bg-card);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-pin);
+}
+[data-theme="light"] .pin-card:hover,
+[data-theme="light"] .product-card:hover {
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow-lg);
+}
+[data-theme="light"] .pin-badge,
+[data-theme="light"] .product-badge {
+  background: rgba(31, 27, 24, 0.88);
+  color: #FFD08A;
+  border-color: rgba(255, 208, 138, 0.4);
+}
+
+/* ---------- 6. Botones (Stitch) ---------- */
+.btn-primary {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  box-shadow: var(--shadow-glow);
+  transition: var(--transition);
+}
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+  color: #ffffff;
+}
+
+.btn-whatsapp {
+  background: var(--whatsapp);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  transition: var(--transition);
+}
+.btn-whatsapp:hover {
+  background: var(--whatsapp-hover);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid var(--border-strong);
+  color: var(--text-main);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  transition: var(--transition);
+}
+.btn-outline:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Botones de acción dentro de las tarjetas */
+.pin-save-btn,
+.pin-mobile-add-btn,
+.pin-customize-btn {
+  background: var(--primary-gradient);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-sm);
+  font-weight: 800;
+  box-shadow: var(--shadow-glow);
+  transition: var(--transition);
+}
+.pin-save-btn:hover,
+.pin-mobile-add-btn:hover { filter: brightness(1.1); }
+.pin-customize-btn {
+  background: var(--surface-pill);
+  color: var(--text-muted);
+  border: 1px solid var(--border-light);
+  box-shadow: none;
+}
+.pin-customize-btn:hover {
+  background: var(--surface-pill-hover);
+  color: var(--text-main);
+  border-color: var(--border-accent);
+}
+
+/* ---------- 7. Barra flotante inferior del carrito (Stitch) ---------- */
+#mobile-cart-float {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  width: 100%;
+  max-width: 100%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-top: 1px solid var(--border-light);
+  border-radius: 0;
+  padding: 12px 16px;
+  box-shadow: 0 -14px 40px -18px rgba(0, 0, 0, 0.85);
+  color: var(--text-main);
+  z-index: 95;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+#mobile-cart-float:active { transform: none; }
+
+.order-float-inner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.order-float-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+}
+
+.order-float-icon {
+  width: 42px;
+  height: 42px;
+  flex: 0 0 42px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-card);
+  border: 1px solid var(--border-light);
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.05rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.order-float-text { min-width: 0; }
+
+.order-float-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-dim);
+  line-height: 1.2;
+}
+
+.order-float-count {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-main);
+  line-height: 1.3;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#mobile-cart-total {
+  color: var(--secondary);
+  font-weight: 900;
+  margin-left: 6px;
+}
+
+.order-float-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.order-float-btn {
+  border-radius: var(--radius-sm);
+  padding: 11px 18px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: 1px solid var(--border-light);
+  background: var(--surface-pill);
+  color: var(--text-main);
+  transition: var(--transition);
+  white-space: nowrap;
+}
+.order-float-btn:hover { background: var(--surface-pill-hover); border-color: var(--border-strong); }
+
+.order-float-btn.primary {
+  background: var(--primary-gradient);
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: var(--shadow-glow);
+}
+.order-float-btn.primary:hover { filter: brightness(1.1); }
+
+.order-float-btn.primary[disabled] {
+  opacity: 0.45;
+  cursor: not-allowed;
+  filter: grayscale(0.4);
+  box-shadow: none;
+}
+
+[data-theme="light"] #mobile-cart-float {
+  background: var(--bg-glass);
+  border-top-color: var(--border-light);
+  box-shadow: 0 -14px 40px -22px rgba(45, 34, 25, 0.28);
+}
+[data-theme="light"] .order-float-btn {
+  background: var(--surface-pill);
+  border-color: var(--border-light);
+  color: var(--text-main);
+}
+[data-theme="light"] .order-float-btn:hover { background: var(--surface-pill-hover); }
+
+/* El toast debe quedar por encima de la barra flotante */
+.toast { bottom: 104px; }
+
+/* ---------- 8. Footer (Stitch) ---------- */
+.footer {
+  background: var(--surface-footer);
+  border-top: 1px solid var(--border-light);
+  color: var(--text-muted);
+  padding-bottom: 110px;
+}
+
+[data-theme="light"] .footer {
+  background: var(--surface-footer);
+  color: rgba(255, 255, 255, 0.62);
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+[data-theme="light"] .footer h4 { color: #ffffff; }
+[data-theme="light"] .footer .logo-main-text { color: #ffffff; }
+[data-theme="light"] .footer .logo-slogan-text { color: rgba(255, 255, 255, 0.55); }
+[data-theme="light"] .footer a { color: rgba(255, 255, 255, 0.78); }
+[data-theme="light"] .footer a:hover { color: var(--secondary); }
+[data-theme="light"] .footer-bottom { border-top-color: rgba(255, 255, 255, 0.08); }
+
+.footer h4 { color: var(--text-main); }
+
+/* ---------- 9. Ajustes responsive de la barra flotante ---------- */
+
+/* Móvil y tablet: la barra flotante mide 56-67px de alto, así que 100px de
+   padding inferior garantizan que al llegar al final del scroll ni las últimas
+   tarjetas del menú ni el contenido del footer queden tapados por la barra. */
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 100px;
+  }
+}
+
+@media (max-width: 640px) {
+  .order-float-icon { display: none; }
+  /* Compactar para que "N productos $XXX" no se trunque en pantallas de 320-390px */
+  .order-float-inner { gap: 10px; }
+  .order-float-label { font-size: 0.72rem; }
+  .order-float-count { font-size: 0.82rem; }
+  .order-float-btn { padding: 10px 11px; font-size: 0.64rem; letter-spacing: 0.03em; }
+  #mobile-cart-float { padding: 10px 12px; }
+  .footer { padding-bottom: 104px; }
+  .toast { bottom: 96px; }
+}
+
+/* En pantallas pequeñas la etiqueta "Tu Pedido:" es prescindible (el icono y el
+   contexto ya lo indican) y a 10px resultaba poco legible: se oculta para que
+   "N productos $XXX" quede como texto protagonista. */
+@media (max-width: 480px) {
+  .order-float-label {
+    display: none;
+  }
+  .order-float-count {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 641px) {
+  .order-float-label { font-size: 0.72rem; }
+  .order-float-count { font-size: 1rem; }
+}
+
+/* Pantallas muy estrechas (320-380px): un solo renglón no alcanza para
+   "N productos $XXX" + los dos botones, así que la barra pasa a dos filas. */
+@media (max-width: 380px) {
+  .order-float-inner {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+  .order-float-info { justify-content: flex-start; }
+  .order-float-actions { width: 100%; }
+  .order-float-btn { flex: 1 1 0; text-align: center; }
+  /* La barra pasa a dos filas y mide ~82px. El padding del body (100px) y del
+     footer (104px) ya superan esos 82px, así que no hace falta tocarlos aquí;
+     solo el botón de WhatsApp necesita subir para quedar 20px por encima
+     (se define en la sección 11). */
+}
+
+/* ==========================================================================
+   10. BOTÓN FLOTANTE DE WHATSAPP
+   ========================================================================== */
+#whatsapp-float-btn {
+  position: fixed;
+  /* 90px = alto de la barra flotante del carrito (~70px) + 20px de margen.
+     La barra es full-width en TODOS los anchos (no solo móvil), así que el
+     botón debe quedar por encima también en escritorio: con bottom:20px
+     tapaba el botón "CONFIRMAR AHORA" entre 769px y 1280px. */
+  bottom: 90px;
+  right: 20px;
+  z-index: 100;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #25D366;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.85rem;
+  line-height: 1;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.25s ease,
+              background-color 0.25s ease;
+}
+
+#whatsapp-float-btn:hover {
+  transform: scale(1.1);
+  background: #1FBE5B;
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+}
+
+#whatsapp-float-btn:active {
+  transform: scale(0.96);
+}
+
+#whatsapp-float-btn:focus-visible {
+  outline: 3px solid #25D366;
+  outline-offset: 3px;
+}
+
+/* En móvil el botón debe quedar por encima de la barra flotante del carrito */
+@media (max-width: 768px) {
+  #whatsapp-float-btn {
+    bottom: 90px;
+    right: 20px;
+  }
+}
+
+/* Pantallas muy estrechas (≤380px): la barra del carrito pasa a dos filas y
+   mide ~82px, así que el botón de WhatsApp sube a 102px (82 + 20px de margen).
+   Además el padding del body en ≤768px (100px) ya cubre esos 82px.
+   (Debe ir después del bloque de 768px para ganar por orden de cascada.) */
+@media (max-width: 380px) {
+  #whatsapp-float-btn {
+    bottom: 102px;
+    right: 20px;
+  }
+}
+
+/* ==========================================================================
+   11. CORRECCIONES DEL HEADER EN MÓVIL
+   (a) La capa de rediseño pisaba el ajuste compacto original del botón de
+       carrito del bloque @media (max-width: 480px) original.
+   (b) Fuga pre-existente: por debajo de ~420px el header no cabía y el botón
+       de menú (hamburguesa) quedaba FUERA de pantalla, dejando el menú móvil
+       inaccesible. Medido en 360px: 43px de desborde en la versión anterior y
+       59px con el rediseño. Afectaba a 320/360/375/390/414px, incluidos
+       iPhone SE, la mayoría de Android e iPhone 12/13/14.
+   ========================================================================== */
+
+@media (max-width: 640px) {
+  /* Stitch oculta la pastilla de estado por debajo de su breakpoint 'sm' (640px).
+     La información de horario sigue disponible en el footer. */
+  #nav-store-status {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Restaura el padding compacto original (mi capa lo había subido a 16px) */
+  .cart-btn {
+    padding: 8px 12px;
+  }
+  .nav-actions {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 380px) {
+  /* En pantallas muy estrechas se oculta el eslogan; el nombre "ENTRE 3"
+     del logo se mantiene */
+  .logo-slogan-text {
+    display: none;
+  }
+}
+
+@media (max-width: 340px) {
+  /* 320px (iPhone SE 1ª gen): afinar para que los controles queden dentro
+     de la gutería del contenedor */
+  .nav-actions {
+    gap: 4px;
+  }
+  .theme-toggle-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+  }
+  .cart-btn {
+    padding: 8px 10px;
+  }
+}
+
+
+
 
 

@@ -86,6 +86,8 @@ export function updateCartUI() {
   const checkoutTriggerBtn = document.getElementById('checkout-trigger-btn');
   const mobileCartCount = document.getElementById('mobile-cart-count');
   const mobileCartTotal = document.getElementById('mobile-cart-total');
+  const orderFloatCountLabel = document.getElementById('order-float-count-label');
+  const orderFloatConfirmBtn = document.getElementById('order-float-confirm-btn');
 
   if (cartBadgeCount) cartBadgeCount.textContent = totalItems;
   if (cartBtnTotal) cartBtnTotal.textContent = `${STORE_CONFIG.currency}${subtotal}`;
@@ -93,6 +95,14 @@ export function updateCartUI() {
   
   if (mobileCartCount) mobileCartCount.textContent = totalItems;
   if (mobileCartTotal) mobileCartTotal.textContent = `${STORE_CONFIG.currency}${subtotal}`;
+  if (orderFloatCountLabel) orderFloatCountLabel.textContent = (totalItems === 1) ? 'producto' : 'productos';
+
+  // Barra flotante: "CONFIRMAR AHORA" se deshabilita si no hay productos
+  if (orderFloatConfirmBtn) {
+    const isEmpty = (cart.length === 0);
+    orderFloatConfirmBtn.disabled = isEmpty;
+    orderFloatConfirmBtn.setAttribute('aria-disabled', isEmpty ? 'true' : 'false');
+  }
   
   if (summarySubtotal) summarySubtotal.textContent = `${STORE_CONFIG.currency}${subtotal}`;
   if (summaryTotal) summaryTotal.textContent = `${STORE_CONFIG.currency}${subtotal}`;
