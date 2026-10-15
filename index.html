@@ -10,10 +10,10 @@
   <title>ENTRE 3 | Hamburguesas, Hot Dogs & Papas - Nanchital de Lázaro Cárdenas del Río, Ver.</title>
   <link rel="icon" type="image/jpeg" href="assets/images/entre_3_logo.jpg">
 
-  <!-- Google Fonts: Bebas Neue, Outfit, Plus Jakarta Sans -->
+  <!-- Google Fonts: Anton (titulares Urban Smash), Inter (cuerpo), Oswald (display alternativo) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@500;600;700&family=Outfit:wght@600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons CDN -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -103,19 +103,21 @@
   <!-- ==========================================================================
        HERO SECTION (PINTEREST BOARD & CREATOR SHOWCASE)
        ========================================================================== -->
-  <section class="hero pinterest-hero" id="home">
+  <section class="hero smash-hero" id="home">
     <div class="container">
       <div class="hero-grid">
-        
-        <!-- Left Content -->
+
+        <!-- Columna izquierda: titular masivo + CTAs -->
         <div class="hero-content scroll-reveal">
           <div class="pinterest-board-badge">
-            <span class="board-badge-icon"><i class="fa-solid fa-thumbtack"></i></span>
+            <span class="board-badge-icon"><i class="fa-solid fa-fire"></i></span>
             <span>Tablero Oficial de ENTRE 3 • Nanchital de Lázaro Cárdenas del Río, Ver.</span>
           </div>
+
           <h1 class="hero-title">
-            ANTOJOS A LA PLANCHA, <br><span class="highlight">HAMBURGUESAS & JOCHOS</span>
+            ANTOJOS A LA<br>PLANCHA,<br><span class="highlight">HAMBURGUESAS<br>&amp; JOCHOS</span>
           </h1>
+
           <p class="hero-desc">
             Explora nuestros pines gastronómicos preparados al momento en Nanchital. Carne 100% de res sellada a la plancha, queso de hebra fundido generosamente, hot dogs especiales envueltos en tocino y papas doraditas para disfrutar.
           </p>
@@ -140,45 +142,39 @@
 
           <!-- Call to Action Buttons -->
           <div class="hero-cta">
-            <a href="#menu" class="btn btn-pinterest">
-              <i class="fa-solid fa-thumbtack"></i> Explorar Tablero
-            </a>
-            <button class="btn btn-whatsapp" id="hero-whatsapp-btn">
-              <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+            <button class="btn btn-smash-primary" id="hero-whatsapp-btn">
+              <i class="fa-brands fa-whatsapp"></i> Ordenar Ahora
             </button>
+            <a href="#menu" class="btn btn-smash-outline">
+              Ver Menú <i class="fa-solid fa-arrow-down"></i>
+            </a>
           </div>
         </div>
 
-        <!-- Right Featured Media (Pinterest Pin Card) -->
+        <!-- Columna derecha: imagen grande + pegatinas decorativas -->
         <div class="hero-media scroll-reveal" style="--fade-idx: 1;">
-          <div class="hero-glow-bg"></div>
-          <div class="hero-card-featured pin-card is-visible" style="margin-bottom: 0;">
-            <div class="hero-brand-floating-badge" title="ENTRE 3 - Tres amigos, un mismo sabor">
-              <img src="assets/images/entre_3_logo.jpg" alt="Logo Oficial ENTRE 3" class="hero-brand-badge-img">
-            </div>
-            <div class="hero-img-wrap pin-media-wrap">
-              <img src="assets/images/burger_cheese_pull_1790710190015.jpg" alt="Burguer Especial con Queso y Tocino" id="hero-img" class="pin-img">
-              <span class="pin-badge">⭐ Pin Destacado</span>
-              <div class="pin-hover-overlay">
-                <div class="pin-top-actions">
-                  <button type="button" class="pin-save-btn" onclick="openProductInLightbox('burger-especial')">
-                    <i class="fa-solid fa-cart-plus"></i> Ordenar
-                  </button>
-                </div>
-                <div class="pin-bottom-actions">
-                  <span style="color: white; font-weight: 700; font-size: 0.85rem; text-shadow: 0 1px 4px rgba(0,0,0,0.8);">🍟 Incluye papas</span>
-                  <button type="button" class="pin-circle-btn" onclick="openProductInLightbox('burger-especial')" title="Ver en pantalla completa">
-                    <i class="fa-solid fa-expand"></i>
-                  </button>
-                </div>
-              </div>
-            </div>
-            <div class="hero-card-info pin-meta">
-              <div>
-                <h3 class="hero-card-name" style="font-size: 1.25rem;">Burguer Especial ENTRE 3</h3>
-                <p class="hero-card-meta">Carne premium de res, doble queso de hebra, tocino crujiente & piña</p>
-              </div>
-              <div class="hero-card-price" style="color: var(--primary); font-size: 1.4rem; font-weight: 800;">$150</div>
+          <div class="hero-image-stage">
+            <div class="hero-glow-bg"></div>
+
+            <img
+              src="assets/images/burger_cheese_pull_1790710190015.jpg"
+              alt="Burguer Especial ENTRE 3 con queso de hebra fundido y tocino crujiente"
+              id="hero-img"
+              class="hero-burger-img"
+              role="button"
+              tabindex="0"
+              title="Ver el platillo"
+              onclick="openProductInLightbox('burger-especial')"
+              onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openProductInLightbox('burger-especial');}"
+            >
+
+            <span class="badge-sticker hero-sticker hero-sticker-1">Hecho al Momento</span>
+            <span class="badge-sticker hero-sticker hero-sticker-2">100% Res</span>
+
+            <div class="hero-stage-caption">
+              <span class="hero-stage-tag">⭐ Pin Destacado</span>
+              <span class="hero-stage-name">Burguer Especial ENTRE 3</span>
+              <span class="hero-stage-price">$150</span>
             </div>
           </div>
         </div>

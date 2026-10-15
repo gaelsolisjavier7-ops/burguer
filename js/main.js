@@ -296,7 +296,7 @@ function renderProducts() {
     card.innerHTML = `
       <div class="pin-media-wrap product-img-wrap gallery-photo-trigger" data-id="${product.id}" role="button" tabindex="0" title="Toca para ver ${product.name} en el tablero">
         <img src="${product.image}" alt="${product.name}" class="pin-img product-img" loading="lazy" onerror="this.src='assets/images/hero_burger.jpg'">
-        ${product.badge ? `<span class="pin-badge product-badge">${product.badge}</span>` : ''}
+        ${product.badge ? `<span class="pin-badge product-badge${product.popular ? ' badge-sticker' : ''}">${product.badge}</span>` : ''}
         <div class="pin-hover-overlay">
           <div class="pin-top-actions">
             <button type="button" class="pin-save-btn btn-add-cart-action" data-id="${product.id}">

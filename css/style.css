@@ -4,112 +4,112 @@
    ========================================================================== */
 
 :root, [data-theme="dark"] {
-  /* Colors - Dark Smoke & Ember Luxe (paleta del diseño oscuro de Stitch) */
-  --bg-main: #0D0F12;
-  --bg-surface: #161920;
-  --bg-card: #1A1D24;
-  --bg-card-hover: #222630;
-  --bg-glass: rgba(22, 25, 32, 0.90);
-  --header-scrolled-bg: rgba(22, 25, 32, 0.94);
+  /* Colors - URBAN SMASH BURGER (modo oscuro predeterminado) */
+  --bg-main: #0A0A0A;
+  --bg-surface: #151515;
+  --bg-card: #1A1A1A;
+  --bg-card-hover: #232323;
+  --bg-glass: rgba(21, 21, 21, 0.92);
+  --header-scrolled-bg: rgba(10, 10, 10, 0.96);
 
-  --primary: #FF4D00; /* Ember */
-  --primary-hover: #FF5E1E; /* Flame */
-  --primary-glow: rgba(255, 77, 0, 0.40);
-  --primary-gradient: linear-gradient(135deg, #FF4D00 0%, #FF5E1E 55%, #FF8A00 100%);
+  --primary: #D32F2F; /* Rojo intenso */
+  --primary-hover: #E53935;
+  --primary-glow: rgba(211, 47, 47, 0.40);
+  --primary-gradient: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
 
-  --secondary: #FFB703; /* Amber Gold */
-  --secondary-hover: #F59E0B;
-  --secondary-glow: rgba(255, 183, 3, 0.30);
+  --secondary: #FBC02D; /* Amarillo / Dorado */
+  --secondary-hover: #F9A825;
+  --secondary-glow: rgba(251, 192, 45, 0.30);
 
-  --whatsapp: #059669; /* Emerald 600 */
-  --whatsapp-hover: #10B981; /* Emerald 500 */
-  --whatsapp-glow: rgba(16, 185, 129, 0.35);
+  --whatsapp: #25D366;
+  --whatsapp-hover: #1EBE57;
+  --whatsapp-glow: rgba(37, 211, 102, 0.35);
 
-  --text-main: #E2E8F0;
-  --text-muted: #B8C0CC;
-  --text-dim: #71717A;
+  --text-main: #FFFFFF;
+  --text-muted: #A0A0A0;
+  --text-dim: #6B6B6B;
 
-  --border-light: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.14);
-  --border-accent: rgba(255, 77, 0, 0.45);
+  --border-light: rgba(255, 255, 255, 0.12);
+  --border-strong: rgba(255, 255, 255, 0.24);
+  --border-accent: rgba(211, 47, 47, 0.50);
 
-  /* Superficies auxiliares del diseño Stitch */
-  --surface-pill: #1C2028;
-  --surface-pill-hover: #252A36;
-  --surface-inset: #12151B;
-  --surface-footer: #090B0E;
+  /* Superficies auxiliares */
+  --surface-pill: #1A1A1A;
+  --surface-pill-hover: #262626;
+  --surface-inset: #0F0F0F;
+  --surface-footer: #000000;
 
-  /* Fonts */
-  --font-display: 'Oswald', 'Bebas Neue', 'Outfit', sans-serif;
-  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  /* Fonts - Urban Smash Burger */
+  --font-display: 'Anton', 'Oswald', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
 
   /* Shadows */
-  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.40);
-  --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.55);
-  --shadow-lg: 0 20px 44px rgba(0, 0, 0, 0.70);
-  --shadow-pin: 0 16px 36px -12px rgba(0, 0, 0, 0.85);
-  --shadow-glow: 0 0 35px -5px rgba(255, 77, 0, 0.45);
-  --shadow-glow-amber: 0 0 25px -3px rgba(255, 183, 3, 0.35);
+  --shadow-sm: 0 4px 14px rgba(0, 0, 0, 0.50);
+  --shadow-md: 0 10px 28px rgba(0, 0, 0, 0.62);
+  --shadow-lg: 0 20px 44px rgba(0, 0, 0, 0.75);
+  --shadow-pin: 0 14px 32px rgba(0, 0, 0, 0.60);
+  --shadow-glow: 0 0 30px -6px rgba(211, 47, 47, 0.45);
+  --shadow-glow-amber: 0 0 24px -4px rgba(251, 192, 45, 0.35);
 
-  /* Layout */
-  --radius-sm: 12px;
-  --radius-md: 16px;
-  --radius-lg: 24px;
-  --radius-pin: 24px;
-  --radius-full: 9999px;
-  --transition: all 0.24s cubic-bezier(0.4, 0, 0.2, 1);
+  /* Layout - ESQUINAS RECTAS (sin píldoras) */
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-lg: 4px;
+  --radius-pin: 4px;
+  --radius-full: 4px;
+  --transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
   /* Atmósfera */
-  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(255, 77, 0, 0.16) 0%, rgba(255, 183, 3, 0.05) 35%, transparent 70%);
-  --scrollbar-track: #11141A;
-  --scrollbar-thumb: #2D3748;
+  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(211, 47, 47, 0.14) 0%, rgba(251, 192, 45, 0.04) 40%, transparent 70%);
+  --scrollbar-track: #0F0F0F;
+  --scrollbar-thumb: #333333;
 }
 
 [data-theme="light"] {
   /* Colors - Warm Bistro Grill (paleta del diseño claro de Stitch) */
-  --bg-main: #FAF7F2;
-  --bg-surface: #FFFDF9;
+  --bg-main: #F4F4F4;
+  --bg-surface: #FFFFFF;
   --bg-card: #FFFFFF;
-  --bg-card-hover: #FBF6EF;
-  --bg-glass: rgba(255, 253, 249, 0.94);
-  --header-scrolled-bg: rgba(255, 253, 249, 0.97);
+  --bg-card-hover: #EFEFEF;
+  --bg-glass: rgba(255, 255, 255, 0.94);
+  --header-scrolled-bg: rgba(255, 255, 255, 0.97);
 
-  --primary: #D9480F; /* Terracotta */
-  --primary-hover: #BF3904;
-  --primary-glow: rgba(217, 72, 15, 0.25);
-  --primary-gradient: linear-gradient(135deg, #D9480F 0%, #E8590C 55%, #F08C00 100%);
+  --primary: #D32F2F; /* Mismo rojo intenso */
+  --primary-hover: #B71C1C;
+  --primary-glow: rgba(211, 47, 47, 0.25);
+  --primary-gradient: linear-gradient(135deg, #D32F2F 0%, #B71C1C 100%);
 
-  --secondary: #F59F00; /* Amber */
-  --secondary-hover: #D48806;
-  --secondary-glow: rgba(245, 159, 0, 0.22);
+  --secondary: #F9A825; /* Dorado, un punto más oscuro para contrastar en blanco */
+  --secondary-hover: #F57F17;
+  --secondary-glow: rgba(249, 168, 37, 0.25);
 
-  --whatsapp: #059669; /* Emerald 600 */
-  --whatsapp-hover: #047857; /* Emerald 700 */
-  --whatsapp-glow: rgba(5, 150, 105, 0.25);
+  --whatsapp: #25D366;
+  --whatsapp-hover: #1EBE57;
+  --whatsapp-glow: rgba(37, 211, 102, 0.25);
 
-  --text-main: #1F1B18;
-  --text-muted: #71655C;
-  --text-dim: #948A80;
+  --text-main: #0A0A0A;
+  --text-muted: #5A5A5A;
+  --text-dim: #8A8A8A;
 
-  --border-light: #EBE3D7;
-  --border-strong: #DEC8B4;
-  --border-accent: rgba(217, 72, 15, 0.30);
+  --border-light: rgba(0, 0, 0, 0.12);
+  --border-strong: rgba(0, 0, 0, 0.26);
+  --border-accent: rgba(211, 47, 47, 0.40);
 
-  --surface-pill: #F3ECE1;
-  --surface-pill-hover: #EDE3D6;
-  --surface-inset: #F7F1E8;
-  --surface-footer: #1F1B18;
+  --surface-pill: #EFEFEF;
+  --surface-pill-hover: #E4E4E4;
+  --surface-inset: #F5F5F5;
+  --surface-footer: #0A0A0A;
 
-  --shadow-sm: 0 4px 20px -2px rgba(45, 34, 25, 0.05), 0 2px 6px -1px rgba(45, 34, 25, 0.03);
-  --shadow-md: 0 12px 28px -6px rgba(45, 34, 25, 0.12);
-  --shadow-lg: 0 16px 36px -6px rgba(180, 75, 20, 0.12), 0 6px 16px -2px rgba(45, 34, 25, 0.06);
-  --shadow-pin: 0 4px 20px -2px rgba(45, 34, 25, 0.06);
-  --shadow-glow: 0 8px 24px -4px rgba(217, 72, 15, 0.35);
-  --shadow-glow-amber: 0 8px 20px -4px rgba(245, 159, 0, 0.30);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 8px 22px rgba(0, 0, 0, 0.12);
+  --shadow-lg: 0 16px 36px rgba(0, 0, 0, 0.16);
+  --shadow-pin: 0 6px 18px rgba(0, 0, 0, 0.10);
+  --shadow-glow: 0 0 24px -6px rgba(211, 47, 47, 0.35);
+  --shadow-glow-amber: 0 0 20px -4px rgba(249, 168, 37, 0.30);
 
-  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(217, 72, 15, 0.10) 0%, rgba(245, 159, 0, 0.05) 40%, transparent 70%);
-  --scrollbar-track: #F3ECE1;
-  --scrollbar-thumb: #D5C7B7;
+  --ambient-glow: radial-gradient(circle at 50% 0%, rgba(211, 47, 47, 0.08) 0%, rgba(249, 168, 37, 0.04) 40%, transparent 70%);
+  --scrollbar-track: #EFEFEF;
+  --scrollbar-thumb: #C4C4C4;
 }
 
 /* Reset & Base */
@@ -6034,6 +6034,626 @@ body::before {
   }
   .cart-btn {
     padding: 8px 10px;
+  }
+}
+
+/* ==========================================================================
+   12. URBAN SMASH BURGER
+   Esquinas rectas (4px), titulares Anton + cuerpo Inter, y textos
+   secundarios de header/footer en mayúsculas con tracking amplio.
+   ========================================================================== */
+
+/* ---------- 12.1 Tipografía ---------- */
+/* Anton es una fuente de UN SOLO peso (400). Los h1/h2 heredan bold del
+   navegador y varios selectores piden 700/800, así que sin desactivar la
+   síntesis el navegador aplicaría "faux bold" y engordaría los titulares. */
+*,
+*::before,
+*::after {
+  font-synthesis: none;
+}
+
+/* Anton es muy ancha de forma natural: se normaliza el peso y se ajusta el
+   tracking para que los titulares largos no desborden en móvil. */
+.hero-title,
+.section-title,
+.logo-main-text,
+.promo-content h3,
+.coverage-box-title,
+.phase-hero-title,
+.step-title,
+.lightbox-title,
+.gallery-cta-left h3,
+.menu-no-results h3,
+.hero-card-name,
+.modal-header h3,
+.cart-header h3 {
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+/* Estas dos apuntaban a familias que ya no se cargan */
+.logo-slogan-text {
+  font-family: var(--font-body);
+}
+.menu-search-input {
+  font-family: var(--font-body);
+}
+
+/* ---------- 12.2 Esquinas rectas (sin redondeos) ---------- */
+/* Las ~110 declaraciones que usan var(--radius-*) ya quedan en 4px desde
+   :root. Estas son las que tenían un valor fijo hardcodeado. */
+.brand-logo-img,
+.hero-brand-floating-badge,
+.menu-search-clear-btn,
+.no-results-icon,
+.pin-circle-btn,
+.pin-author-img,
+.pin-customize-btn,
+.pin-creator-avatar,
+.lightbox-close,
+.lightbox-nav-btn,
+.step-number,
+.cart-close-btn,
+.store-status-circle,
+.step-node,
+.feature-icon,
+.search-keyboard-hint kbd,
+#whatsapp-float-btn,
+.pin-detail-lightbox .lightbox-dialog,
+*::-webkit-scrollbar-thumb {
+  border-radius: var(--radius-sm);
+}
+
+/* Indicadores diminutos (≤10px): cuadrado, no círculo */
+#nav-status-dot,
+.wait-pulse-dot,
+.map-live-dot,
+.zone-badge-dot,
+.tracker-nav-live-dot,
+.tracker-float-pulse,
+.hero-live-dot {
+  border-radius: 2px;
+}
+
+/* El resplandor del hero es un degradado: no necesita esquinas */
+.hero-glow-bg {
+  border-radius: 0;
+}
+
+/* ---------- 12.3 Textos secundarios: mayúsculas + tracking amplio ---------- */
+/* Header: eslogan, estado y total del carrito.
+   #nav-store-status es necesario porque el selector de ID original fija
+   letter-spacing: 0.2px y ganaría a la clase .status-badge. */
+.logo-slogan-text,
+.status-badge,
+#nav-store-status,
+#nav-status-text,
+.cart-btn-total,
+.theme-tooltip,
+.mobile-theme-btn span {
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+}
+
+/* Los enlaces del nav también van en mayúsculas, pero con tracking y tamaño
+   más contenidos: con 0.14em el menú medía ~670px, se partía en 2-3 líneas y
+   desbordaba la barra hasta 303px en tablet (769-1100px). */
+.nav-links {
+  gap: 10px;
+}
+.nav-link {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  padding: 8px 8px;
+  white-space: nowrap;
+}
+
+/* Footer: titulares de columna, enlaces, eslogan y aviso legal */
+.footer h4,
+.footer a,
+.footer .logo-slogan-text,
+.footer-bottom p {
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+}
+
+/* Los párrafos informativos largos del footer (horarios, teléfono, cobertura
+   y la descripción de marca) se dejan en caja normal: pasarlos a mayúsculas
+   los volvía ilegibles. Si los quieres también en mayúsculas, es una línea. */
+.footer-col ul li {
+  letter-spacing: 0.02em;
+}
+
+/* ---------- 12.4 Encaje del header en pantallas medianas ---------- */
+/* En mayúsculas y con tracking el menú ocupa más: por debajo de 1100px el
+   header no cabe con la pastilla de estado, así que se oculta (el horario
+   sigue disponible en el footer) y el menú se compacta un poco más. */
+@media (max-width: 1100px) {
+  #nav-store-status {
+    display: none;
+  }
+}
+
+@media (max-width: 980px) {
+  .nav-links {
+    gap: 6px;
+  }
+  .nav-link {
+    font-size: 0.72rem;
+    padding: 8px 6px;
+  }
+}
+
+/* ---------- 12.5 Banda 769-830px: menú desplegable ---------- */
+/* El breakpoint del menú móvil está en 768px, pero en mayúsculas y con
+   tracking el menú de escritorio ya no cabe hasta ~830px. En esa franja se
+   activa el mismo menú desplegable en lugar de dejar el header desbordado
+   (antes se salía hasta 39px de la pantalla). */
+@media (min-width: 769px) and (max-width: 830px) {
+  .nav-links {
+    position: fixed;
+    top: 76px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-surface);
+    flex-direction: column;
+    padding: 24px;
+    gap: 16px;
+    border-bottom: 1px solid var(--border-light);
+    transform: translateY(-150%);
+    transition: var(--transition);
+  }
+  .nav-links.open {
+    transform: translateY(0);
+  }
+  .nav-links .nav-link {
+    font-size: 0.82rem;
+    padding: 10px 12px;
+  }
+  .menu-toggle {
+    display: flex;
+  }
+  .mobile-theme-item {
+    display: block;
+  }
+}
+
+/* ==========================================================================
+   14. URBAN SMASH BURGER — componentes
+   Botones rojos planos, tarjetas oscuras sin sombras suaves, degradado en las
+   imágenes y etiquetas tipo pegatina.
+   ========================================================================== */
+
+/* ---------- 14.1 Botones ---------- */
+.btn-primary {
+  background: #D32F2F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0;              /* sin esquinas redondeadas */
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  box-shadow: none;
+  filter: none;
+}
+
+.btn-primary:hover {
+  background: #B71C1C;           /* rojo más oscuro */
+  color: #FFFFFF;
+  filter: none;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Botón "Añadir al Pedido" dentro de las tarjetas */
+.pin-save-btn,
+.pin-mobile-add-btn {
+  background: #D32F2F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 0;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: none;
+}
+.pin-save-btn:hover,
+.pin-mobile-add-btn:hover {
+  background: #B71C1C;
+  filter: none;
+  box-shadow: none;
+}
+
+/* ---------- 14.2 Tarjetas de producto ---------- */
+/* Sin sombras suaves: borde de 1px sobre fondo plano */
+.pin-card,
+.product-card {
+  background: #151515;
+  border: 1px solid #333333;
+  box-shadow: none;
+}
+
+.pin-card:hover,
+.product-card:hover {
+  border-color: #D32F2F;
+  box-shadow: none;
+}
+
+/* En modo claro una tarjeta #151515 dejaría el texto oscuro ilegible:
+   se mantiene la tarjeta clara con un borde equivalente */
+[data-theme="light"] .pin-card,
+[data-theme="light"] .product-card {
+  background: var(--bg-surface);
+  border-color: #E0E0E0;
+}
+[data-theme="light"] .pin-card:hover,
+[data-theme="light"] .product-card:hover {
+  border-color: #D32F2F;
+}
+
+/* Las imágenes ya son width:100% + object-fit:cover (líneas 1485-1491);
+   este degradado funde la parte inferior con el fondo de la tarjeta para que
+   el texto blanco resalte. */
+.pin-media-wrap::after,
+.product-img-wrap::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 55%;
+  background: linear-gradient(to top,
+      #151515 0%,
+      rgba(21, 21, 21, 0.78) 35%,
+      rgba(21, 21, 21, 0) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme="light"] .pin-media-wrap::after,
+[data-theme="light"] .product-img-wrap::after {
+  background: linear-gradient(to top,
+      #FFFFFF 0%,
+      rgba(255, 255, 255, 0.78) 35%,
+      rgba(255, 255, 255, 0) 100%);
+}
+
+/* ---------- 14.3 Etiqueta pegatina (.badge-sticker) ---------- */
+/* Círculo rojo, texto blanco en negrita y ligeramente rotado.
+   Reutilizable en cualquier parte; en las tarjetas convive con .pin-badge,
+   cuyo fondo/borde hay que sobreescribir (y también su override de modo claro). */
+.badge-sticker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 92px;
+  height: 92px;
+  padding: 10px;
+  border-radius: 50%;
+  background: #D32F2F;
+  color: #FFFFFF;
+  border: none;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 0.58rem;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  text-align: center;
+  text-transform: uppercase;
+  transform: rotate(-10deg);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+.pin-badge.badge-sticker,
+.product-badge.badge-sticker {
+  top: 10px;
+  left: 10px;
+  z-index: 3;
+  background: #D32F2F;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 50%;
+  backdrop-filter: none;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 0.58rem;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+/* ==========================================================================
+   15. HERO ESTILO SMASH
+   Titular masivo, imagen grande a la derecha con fondo oscuro y pegatinas.
+   ========================================================================== */
+
+.hero.smash-hero {
+  background: #0A0A0A;                    /* negro puro */
+  border-bottom: 1px solid #1F1F1F;
+  padding-top: 88px;                      /* el header fixed mide ~77px */
+  padding-bottom: 58px;
+  overflow: hidden;
+}
+
+/* Contenedor algo más ancho solo en el hero: el titular masivo y la imagen
+   grande necesitan más sitio que los 1200px del resto del sitio. */
+.smash-hero .container {
+  max-width: 1360px;
+}
+
+.smash-hero .hero-grid {
+  /* minmax(0, …) es imprescindible: con `fr` a secas, el min-content del h1
+     ("HAMBURGUESAS" a 128px = 752px) actuaba como suelo de la columna y
+     aplastaba la imagen a 349px. */
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+  gap: 40px;
+  align-items: center;
+}
+
+/* ---------- Titular masivo ---------- */
+.smash-hero .hero-title {
+  font-family: var(--font-display);
+  /* 8.5vw en vez de 10vw: con 10vw la palabra más larga superaba su columna
+     entre 1280 y 1500px de viewport. */
+  font-size: clamp(4rem, 8.5vw, 8rem);
+  line-height: 0.9;
+  letter-spacing: -0.005em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+  overflow-wrap: normal;
+}
+
+.smash-hero .hero-title .highlight {
+  color: #D32F2F;                         /* palabra clave en rojo */
+  display: inline;
+}
+
+.smash-hero .hero-desc {
+  color: #A0A0A0;
+  font-size: 0.98rem;
+  line-height: 1.6;
+  max-width: 640px;
+  margin-bottom: 12px;
+}
+
+/* ---------- Botones grandes ---------- */
+.smash-hero .hero-cta {
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.btn-smash-primary,
+.btn-smash-outline {
+  padding: 20px 38px;
+  border-radius: 0;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.btn-smash-primary {
+  background: #D32F2F;
+  border: 2px solid #D32F2F;
+  color: #FFFFFF;
+}
+
+.btn-smash-primary:hover {
+  background: #B71C1C;
+  border-color: #B71C1C;
+  color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.btn-smash-outline {
+  background: transparent;
+  border: 2px solid #FFFFFF;
+  color: #FFFFFF;
+}
+
+.btn-smash-outline:hover {
+  background: #FFFFFF;
+  color: #0A0A0A;
+  transform: translateY(-2px);
+}
+
+/* ---------- Imagen grande con fondo oscuro ---------- */
+/* .hero-media es display:flex en el CSS base, lo que hacía que el escenario
+   se encogiera al contenido (la imagen quedaba en 295px en vez de llenar su
+   columna del grid). */
+.smash-hero .hero-media {
+  display: block;
+  width: 100%;
+}
+
+.hero-image-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background: radial-gradient(circle at 50% 42%, #1C1C1C 0%, #101010 55%, #0A0A0A 100%);
+  border: 1px solid #1F1F1F;
+  border-radius: 4px;
+  padding: 26px;
+  min-height: 460px;
+}
+
+.hero-burger-img {
+  display: block;
+  width: 100%;
+  max-width: 620px;
+  height: 470px;
+  object-fit: cover;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.hero-image-stage .hero-glow-bg {
+  z-index: 0;
+}
+
+/* ---------- Pegatinas decorativas alrededor de la imagen ---------- */
+.hero-sticker {
+  position: absolute;
+  z-index: 4;
+  width: 116px;
+  height: 116px;
+  font-size: 0.74rem;
+  pointer-events: none;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.65);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  border-radius: 50%;
+  background: #D32F2F;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  font-family: var(--font-display);
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+}
+
+.hero-sticker-1 {
+  top: -22px;
+  left: -22px;
+  transform: rotate(-15deg);
+}
+
+.hero-sticker-2 {
+  bottom: 34px;
+  right: -26px;
+  transform: rotate(-15deg);
+}
+
+/* ---------- Pie de la imagen ---------- */
+.hero-stage-caption {
+  position: absolute;
+  left: 26px;
+  right: 26px;
+  bottom: 26px;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 14px 18px;
+  background: linear-gradient(180deg, rgba(10, 10, 10, 0.55) 0%, rgba(10, 10, 10, 0.92) 100%);
+  border-left: 3px solid #D32F2F;
+  border-radius: 0 4px 4px 0;
+  backdrop-filter: blur(6px);
+  pointer-events: none;
+}
+
+.hero-stage-tag {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #FBC02D;
+}
+
+.hero-stage-name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.3rem;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  line-height: 1.1;
+}
+
+.hero-stage-price {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 1.45rem;
+  color: #FBC02D;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .hero-burger-img {
+    height: 400px;
+  }
+}
+
+@media (max-width: 900px) {
+  .smash-hero .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+  .hero-image-stage {
+    min-height: 0;
+    padding: 18px;
+  }
+  .hero-burger-img {
+    height: 340px;
+  }
+  .hero-stage-caption {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+  /* En una columna la etapa ocupa todo el ancho: las pegatinas se meten
+     hacia dentro para no salirse del viewport */
+  .hero-sticker-1 {
+    top: -16px;
+    left: 6px;
+  }
+  .hero-sticker-2 {
+    bottom: 26px;
+    right: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .smash-hero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  /* clamp(4rem, ...) desbordaría en móvil: "HAMBURGUESAS" a 64px no cabe */
+  .smash-hero .hero-title {
+    font-size: clamp(2.4rem, 12vw, 4rem);
+    margin-bottom: 18px;
+  }
+  .hero-burger-img {
+    height: 280px;
+  }
+  .hero-sticker {
+    width: 90px;
+    height: 90px;
+    font-size: 0.6rem;
+    padding: 9px;
+  }
+  .hero-sticker-1 {
+    top: -14px;
+    left: -10px;
+  }
+  .hero-sticker-2 {
+    bottom: 24px;
+    right: -12px;
+  }
+  .btn-smash-primary,
+  .btn-smash-outline {
+    flex: 1 1 auto;
+    padding: 17px 22px;
+    font-size: 0.92rem;
+  }
+  .hero-stage-name {
+    font-size: 1.05rem;
   }
 }
 
