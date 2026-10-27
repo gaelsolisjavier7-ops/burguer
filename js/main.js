@@ -300,7 +300,7 @@ function renderProducts() {
         <div class="pin-hover-overlay">
           <div class="pin-top-actions">
             <button type="button" class="pin-save-btn btn-add-cart-action" data-id="${product.id}">
-              <i class="fa-solid fa-cart-plus"></i> ${isHotDog ? 'Elegir' : 'Añadir'}
+              <i class="fa-solid fa-cart-plus"></i> ${isHotDog ? 'Elegir Opción' : 'Añadir'}
             </button>
           </div>
           <div class="pin-bottom-actions">
@@ -334,7 +334,7 @@ function renderProducts() {
               <i class="fa-solid fa-sliders"></i>
             </button>
             <button type="button" class="pin-mobile-add-btn btn-add-cart-action" data-id="${product.id}">
-              <i class="fa-solid fa-plus"></i> ${isHotDog ? 'Elegir' : 'Añadir'}
+              <i class="fa-solid fa-plus"></i> ${isHotDog ? 'Elegir Opción' : 'Añadir'}
             </button>
           </div>
         </div>
@@ -673,10 +673,72 @@ function init() {
   updateCartUI();
   updateStoreHoursUI();
   setupEventListeners();
+  initStickyToolbar();
+  handleViewParam();
 
   setInterval(() => {
     updateStoreHoursUI();
   }, 60000);
+}
+
+/**
+ * Si la URL trae ?view=menu (los clientes llegan escaneando un QR), baja
+ * automáticamente al menú. Se espera a que las fuentes estén listas para que
+ * el cálculo de la posición sea exacto.
+ */
+function handleViewParam() {
+  let params;
+  try {
+    params = new URLSearchParams(window.location.search);
+  } catch (e) {
+    return;
+  }
+  if (params.get('view') !== 'menu') return;
+
+  const menuEl = document.getElementById('menu');
+  if (!menuEl) return;
+
+  const scrollToMenu = () => {
+    const header = document.getElementById('header');
+    const headerH = header ? header.getBoundingClientRect().height : 0;
+    const top = menuEl.getBoundingClientRect().top + window.scrollY - headerH - 8;
+
+    const reduced = window.matchMedia &&
+      window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    window.scrollTo({
+      top: Math.max(0, top),
+      behavior: reduced ? 'auto' : 'smooth'
+    });
+  };
+
+  // Tras el primer pintado y, si es posible, con las fuentes ya cargadas
+  requestAnimationFrame(() => {
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(() => setTimeout(scrollToMenu, 60));
+    } else {
+      setTimeout(scrollToMenu, 150);
+    }
+  });
+}
+
+/**
+ * Sombra de la barra sticky solo cuando está pegada al header.
+ */
+function initStickyToolbar() {
+  const toolbar = document.getElementById('menu-toolbar');
+  if (!toolbar) return;
+
+  const header = document.getElementById('header');
+  const update = () => {
+    const headerH = header ? header.getBoundingClientRect().height : 0;
+    const isStuck = toolbar.getBoundingClientRect().top <= headerH + 1;
+    toolbar.classList.toggle('is-stuck', isStuck);
+  };
+
+  window.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
 }
 
 // Mantiene el contador "N Pines de Menú" del hero sincronizado con MENU_DATA
